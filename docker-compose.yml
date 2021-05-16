@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  mysql:
+    image: "mysql"
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 9001:80
+    environment:
+      PMA_ARBITRARY: 1
+      PMA_HOST: mysql
+
+  app:
+    build:
+      context: ./
+      dockerfile: docker/php/Dockerfile
+    depends_on:
+      - mysql
+    restart: always
+    user: "1000"
+    working_dir: /usr/src/myapp
+    ports:
+      - 9000:8080
+    volumes:
+      - ./:/usr/src/myapp
+    environment:
+      PORT: 8080
+    command: "php -S 0.0.0.0:8080 -t public"
