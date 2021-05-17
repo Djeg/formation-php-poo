@@ -2,11 +2,11 @@
 
 class Personnage
 {
-    public int $vie;
+    private int $vie;
 
-    public int $attaque;
+    private int $attaque;
 
-    public string $nom;
+    private string $nom;
 
     public function __construct(string $nom, int $vie, int $attaque)
     {
@@ -18,6 +18,16 @@ class Personnage
     public function regenerer(int $vie = 100): void
     {
         $this->vie = $vie;
+    }
+
+    public function getNom(): string
+    {
+        return $this->nom;
+    }
+
+    public function setName(string $nom): void
+    {
+        $this->nom = $nom;
     }
 
     public function afficher(): void
