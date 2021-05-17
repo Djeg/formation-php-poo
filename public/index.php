@@ -2,8 +2,8 @@
 
 require_once '../src/Personnage.php';
 
-$merlin = new Personnage();
-$arthur = new Personnage();
+$merlin = new Personnage('Merlin');
+$arthur = new Personnage('Arthur');
 
 $merlin->attaque = 50;
 
