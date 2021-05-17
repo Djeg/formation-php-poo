@@ -20,7 +20,8 @@ class Personnage
 
     public function afficher(): void
     {
-        echo 'Le personnage a '
+        echo $this->nom
+            . ' a '
             . $this->vie
             . ' de vie et '
             . $this->attaque
@@ -29,6 +30,9 @@ class Personnage
 
     public function attaquer(Personnage $victim): void
     {
+        echo $this->nom . ' attaque ' . $victim->nom . ' !';
+        echo '<br />';
+
         $victim->vie = $victim->vie - $this->attaque;
     }
 }
