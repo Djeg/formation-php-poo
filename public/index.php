@@ -5,16 +5,18 @@ require_once '../src/Personnage.php';
 $merlin = new Personnage();
 $arthur = new Personnage();
 
-$merlin->vie = 40;
-$merlin->attaque = 20;
+$merlin->attaque = 50;
 
-$merlin->regenerer(80);
+$merlin->afficher();
+
+echo '<br />';
+
+$arthur->afficher();
+
+echo '<br />';
 
 $arthur->attaquer($merlin);
 $merlin->attaquer($arthur);
-
-$arthur->vie = 100;
-$arthur->attaque = 50;
 
 $merlin->afficher();
 
