@@ -2,15 +2,17 @@
 
 class Personnage
 {
-    public int $vie = 100;
+    public int $vie;
 
-    public int $attaque = 20;
+    public int $attaque;
 
     public string $nom;
 
-    public function __construct(string $nom)
+    public function __construct(string $nom, int $vie, int $attaque)
     {
         $this->nom = $nom;
+        $this->attaque = $attaque;
+        $this->vie = $vie;
     }
 
     public function regenerer(int $vie = 100): void
