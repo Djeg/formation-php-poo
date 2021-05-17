@@ -2,11 +2,11 @@
 
 class Personnage
 {
-    private int $vie;
+    protected int $vie;
 
-    private int $attaque;
+    protected int $attaque;
 
-    private string $nom;
+    protected string $nom;
 
     public function __construct(string $nom, int $vie, int $attaque)
     {

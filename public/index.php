@@ -1,10 +1,10 @@
 <?php
 
 require_once '../src/Personnage.php';
+require_once '../src/Magician.php';
 
-$merlin = new Personnage('Merlin', 100, 40);
+$merlin = new Magician('Merlin', 100, 40);
 $arthur = new Personnage('Arthur', 100, 10);
-
 
 $merlin->afficher();
 
@@ -15,6 +15,7 @@ $arthur->afficher();
 echo '<br />';
 
 $arthur->attaquer($merlin);
+$merlin->castSpell($arthur);
 $merlin->attaquer($arthur);
 
 $merlin->setName('Merlin le maginifique');
