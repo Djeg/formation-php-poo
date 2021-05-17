@@ -2,9 +2,9 @@
 
 class Personnage
 {
-    public int $vie = 100;
+    private int $vie = 100;
 
-    public int $attaque = 20;
+    private int $attaque = 20;
 
     private string $nom;
 

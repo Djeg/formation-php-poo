@@ -1,19 +1,12 @@
 <?php
 
 require_once '../src/Personnage.php';
+require_once '../src/Magician.php';
 
-$merlin = new Personnage('Merlin');
-$merlin->vie = 50;
-$merlin->attaque = 40;
-
-echo $merlin->nom;
-
+$merlin = new Magician('Merlin');
 $arthur = new Personnage('Arthur');
-$arthur->vie = 100;
-$arthur->attaque = 30;
 
 $arthur->attaquer($merlin);
-
 $merlin->afficher();
 
 echo '<br/>';
