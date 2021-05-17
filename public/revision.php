@@ -125,3 +125,14 @@ function input($name, $type = 'text')
 }
 
 input('email');
+
+echo '<br />';
+
+/**
+ * Require permet d'inclure d'autre fichiers PHP.
+ * 
+ * Pour cela on lui spécifie le chemin du fichier à inclure.
+ */
+require './include/menu.php';
+
+echo coucou();
