@@ -2,17 +2,19 @@
 
 require_once '../src/Personnage.php';
 require_once '../src/Magician.php';
+require_once '../src/Text.php';
 
 $merlin = new Magician('Merlin', 100, 40);
 $arthur = new Personnage('Arthur', 100, 10);
 
 $merlin->afficher();
 
-echo '<br />';
+Text::lineBreak();
+Html::lineBreak();
 
 $arthur->afficher();
 
-echo '<br />';
+Text::lineBreak();
 
 $arthur->attaquer($merlin);
 $merlin->castSpell($arthur);
@@ -22,7 +24,7 @@ $merlin->setName('Merlin le maginifique');
 
 $merlin->afficher();
 
-echo '<br />';
+Text::lineBreak();
 
 $arthur->afficher();
 
