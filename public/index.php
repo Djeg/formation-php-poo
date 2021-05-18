@@ -1,9 +1,9 @@
 <?php
 
 spl_autoload_register(function ($className) {
-    require_once __DIR__ . '/../src/' . $className . '.php';
+    $path = str_replace('\\', '/', $className);
+    require_once __DIR__ . '/../src/' . $path . '.php';
 });
-
 
 // Créer un login form
 $form = new Form('POST', 'div');
@@ -15,6 +15,8 @@ $form = new Form('POST', 'div');
 </head>
 
 <body>
+    <?php Outil\Textuelle\Text::title(); ?>
+
     <?php
     $form->display([
         'widgets' => [
