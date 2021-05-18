@@ -12,20 +12,20 @@ $form = new Form('div');
 </head>
 
 <body>
-    <form method="post">
-        <?php
-        $form->widget('Nom d\'utilisateur', 'username', 'text');
+    <?php
+    $form->start('POST');
+    $form->widget('Nom d\'utilisateur', 'username', 'text');
 
-        $form->widget('Mot de passe', 'password', 'password');
+    $form->widget('Mot de passe', 'password', 'password');
 
-        $form->button('Envoyer');
-        // Afficher le label pour le nom d'utilisateur        
-        // Afficher l'input pour le nom d'utilisateur
-        // Affihcer le label pout le mot de passe
-        // Afficher l'input pour le mote de passe
-        // afficher un bouton de soumission
-        ?>
-    </form>
+    $form->button('Envoyer');
+    $form->end();
+    // Afficher le label pour le nom d'utilisateur        
+    // Afficher l'input pour le nom d'utilisateur
+    // Affihcer le label pout le mot de passe
+    // Afficher l'input pour le mote de passe
+    // afficher un bouton de soumission
+    ?>
 </body>
 
 </html>

@@ -48,4 +48,14 @@ class Form
         $this->submitButton($text);
         $this->endBlock();
     }
+
+    public function start(string $method): void
+    {
+        echo '<form method="' . $method . '">';
+    }
+
+    public function end(): void
+    {
+        echo '</form>';
+    }
 }
