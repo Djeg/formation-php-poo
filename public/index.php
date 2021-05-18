@@ -3,7 +3,7 @@
 require '../src/Form.php';
 
 // Créer un login form
-$loginForm = new Form();
+$form = new Form();
 ?>
 <html>
 
@@ -14,6 +14,11 @@ $loginForm = new Form();
 <body>
     <form method="post">
         <?php
+        $form->label('Nom d\'utilisateur', 'username');
+        $form->input('username', 'text');
+        $form->label('Mot de passe', 'password');
+        $form->input('password', 'password');
+        $form->submitButton('Envoyer');
         // Afficher le label pour le nom d'utilisateur        
         // Afficher l'input pour le nom d'utilisateur
         // Affihcer le label pout le mot de passe
