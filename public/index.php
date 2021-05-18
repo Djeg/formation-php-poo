@@ -10,7 +10,6 @@ $arthur = new Personnage('Arthur', 100, 10);
 $merlin->afficher();
 
 Text::lineBreak();
-Html::lineBreak();
 
 $arthur->afficher();
 
