@@ -13,18 +13,13 @@ $form = new Form('POST', 'div');
 
 <body>
     <?php
-    $form->start();
-    $form->widget('Nom d\'utilisateur', 'username', 'text');
-
-    $form->widget('Mot de passe', 'password', 'password');
-
-    $form->button('Envoyer');
-    $form->end();
-    // Afficher le label pour le nom d'utilisateur        
-    // Afficher l'input pour le nom d'utilisateur
-    // Affihcer le label pout le mot de passe
-    // Afficher l'input pour le mote de passe
-    // afficher un bouton de soumission
+    $form->display([
+        'widgets' => [
+            ['Email :', 'email', 'email'],
+            ['Mot de passe :', 'password', 'password'],
+        ],
+        'button' => 'Envoyer'
+    ]);
     ?>
 </body>
 

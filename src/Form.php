@@ -67,9 +67,21 @@ class Form
         $widgets = $config['widgets'];
         $buttonLabel = $config['button'];
 
+        $this->start();
+
         // Boucler sur les widgets et appeler la méthode widget avec les
         // bon arguments
+        foreach ($widgets as $widget) {
+            $label = $widget[0];
+            $name = $widget[1];
+            $type = $widget[2];
+
+            $this->widget($label, $name, $type);
+        }
 
         // Afficher un bouton avec le $boutonLabel
+        $this->button($buttonLabel);
+
+        $this->end();
     }
 }
