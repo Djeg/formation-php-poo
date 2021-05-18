@@ -2,6 +2,13 @@
 
 class Form
 {
+    protected string $separator;
+
+    public function __construct(string $separator)
+    {
+        $this->separator = $separator;
+    }
+
     public function label(string $text, string $for): void
     {
         echo '<label for="' . $for . '">' . $text . '</label>';
@@ -15,5 +22,15 @@ class Form
     public function submitButton(string $text): void
     {
         echo '<button type="submit">' . $text . '</button>';
+    }
+
+    public function startBlock(): void
+    {
+        echo '<' . $this->separator . '>';
+    }
+
+    public function endBlock(): void
+    {
+        echo '</' . $this->separator . '>';
     }
 }
