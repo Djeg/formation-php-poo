@@ -4,9 +4,12 @@ class Form
 {
     protected string $separator;
 
-    public function __construct(string $separator)
+    protected string $method;
+
+    public function __construct(string $method, string $separator)
     {
         $this->separator = $separator;
+        $this->method = $method;
     }
 
     public function label(string $text, string $for): void
@@ -49,9 +52,9 @@ class Form
         $this->endBlock();
     }
 
-    public function start(string $method): void
+    public function start(): void
     {
-        echo '<form method="' . $method . '">';
+        echo '<form method="' . $this->method . '">';
     }
 
     public function end(): void

@@ -3,7 +3,7 @@
 require '../src/Form.php';
 
 // Créer un login form
-$form = new Form('div');
+$form = new Form('POST', 'div');
 ?>
 <html>
 
@@ -13,7 +13,7 @@ $form = new Form('div');
 
 <body>
     <?php
-    $form->start('POST');
+    $form->start();
     $form->widget('Nom d\'utilisateur', 'username', 'text');
 
     $form->widget('Mot de passe', 'password', 'password');
