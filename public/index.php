@@ -18,9 +18,7 @@ $form = new Form('div');
 
         $form->widget('Mot de passe', 'password', 'password');
 
-        $form->startBlock();
-        $form->submitButton('Envoyer');
-        $form->endBlock();
+        $form->button('Envoyer');
         // Afficher le label pour le nom d'utilisateur        
         // Afficher l'input pour le nom d'utilisateur
         // Affihcer le label pout le mot de passe
