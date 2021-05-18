@@ -14,15 +14,9 @@ $form = new Form('div');
 <body>
     <form method="post">
         <?php
-        $form->startBlock();
-        $form->label('Nom d\'utilisateur', 'username');
-        $form->input('username', 'text');
-        $form->endBlock();
+        $form->widget('Nom d\'utilisateur', 'username', 'text');
 
-        $form->startBlock();
-        $form->label('Mot de passe', 'password');
-        $form->input('password', 'password');
-        $form->endBlock();
+        $form->widget('Mot de passe', 'password', 'password');
 
         $form->startBlock();
         $form->submitButton('Envoyer');

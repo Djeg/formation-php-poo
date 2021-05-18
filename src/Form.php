@@ -33,4 +33,12 @@ class Form
     {
         echo '</' . $this->separator . '>';
     }
+
+    public function widget(string $label, string $name, string $type): void
+    {
+        $this->startBlock();
+        $this->label($label, $name);
+        $this->input($name, $type);
+        $this->endBlock();
+    }
 }
