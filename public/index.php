@@ -5,6 +5,8 @@ spl_autoload_register(function ($className) {
     require_once __DIR__ . '/../src/' . $path . '.php';
 });
 
+use Outil\Textuelle\Text;
+
 // Créer un login form
 $form = new Form('POST', 'div');
 ?>
@@ -15,7 +17,7 @@ $form = new Form('POST', 'div');
 </head>
 
 <body>
-    <?php Outil\Textuelle\Text::title(); ?>
+    <?php Text::title(); ?>
 
     <?php
     $form->display([
