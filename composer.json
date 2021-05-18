@@ -1,0 +1,17 @@
+{
+    "name": "djeg/php-poo-tutorial",
+    "authors": [
+        {
+            "name": "David Jegat",
+            "email": "david.jegat@knplabs.com"
+        }
+    ],
+    "require": {
+        "symfony/finder": "^5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    }
+}

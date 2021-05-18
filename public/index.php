@@ -1,9 +1,6 @@
 <?php
 
-spl_autoload_register(function ($className) {
-    $path = str_replace('\\', '/', $className);
-    require_once __DIR__ . '/../src/' . $path . '.php';
-});
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use Outil\Textuelle\Text;
 
