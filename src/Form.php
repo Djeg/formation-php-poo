@@ -61,4 +61,15 @@ class Form
     {
         echo '</form>';
     }
+
+    public function display(array $config): void
+    {
+        $widgets = $config['widgets'];
+        $buttonLabel = $config['button'];
+
+        // Boucler sur les widgets et appeler la méthode widget avec les
+        // bon arguments
+
+        // Afficher un bouton avec le $boutonLabel
+    }
 }
