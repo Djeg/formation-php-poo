@@ -1,8 +1,11 @@
 <?php
 
-require_once '../src/Personnage.php';
-require_once '../src/Magician.php';
-require_once '../src/Text.php';
+spl_autoload_register(function ($class) {
+    $path = str_replace('\\', '/', $class);
+    require_once __DIR__ . '/../src/' . $path . '.php';
+});
+
+use Util\Text;
 
 $merlin = new Magician('Merlin', 100, 40);
 $arthur = new Personnage('Arthur', 100, 10);
@@ -23,7 +26,7 @@ $merlin->setName('Merlin le maginifique');
 
 $merlin->afficher();
 
-Text::lineBreak();
+Util\Text::lineBreak();
 
 $arthur->afficher();
 
