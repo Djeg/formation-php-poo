@@ -41,4 +41,11 @@ class Form
         $this->input($name, $type);
         $this->endBlock();
     }
+
+    public function button(string $text): void
+    {
+        $this->startBlock();
+        $this->submitButton($text);
+        $this->endBlock();
+    }
 }
