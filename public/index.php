@@ -10,12 +10,17 @@ $arthur = new Personnage();
 $arthur->vie = 20;
 $arthur->attaque = 30;
 
-// Pouvoir fournir un paramètre à notre
-// méthode "regenerer" afin de spécifier
-// le nombre de point de vie à rajouter
-// notre vie
-$arthur->regenerer(10);
-$merlin->regenerer(20);
+$morganne = new Personnage();
+$morganne->vie = 150;
+$morganne->attaque = 40;
+
+echo $arthur->afficher();
+echo "<br />";
+echo $merlin->afficher();
+
+echo "Arthur attaque merlin !";
+echo "<br />";
+$arthur->attaque($merlin); // Merlin vie === 20 (50 - 30)
 
 echo $arthur->afficher();
 echo "<br />";

@@ -15,4 +15,9 @@ class Personnage
     {
         return "Vie: {$this->vie}, Attaque: {$this->attaque}";
     }
+
+    public function attaque(Personnage $cible): void
+    {
+        $cible->vie = $cible->vie - $this->attaque;
+    }
 }
