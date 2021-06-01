@@ -6,6 +6,8 @@ class Personnage
 
     public int $attaque = 20;
 
+    public int $magie = 30;
+
     public function regenerer(int $vie = 20): void
     {
         $this->vie = $this->vie + $vie;
