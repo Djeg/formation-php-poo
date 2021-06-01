@@ -18,6 +18,7 @@ echo $arthur->afficher();
 echo "<br />";
 echo $merlin->afficher();
 
+echo "<br />";
 echo "Arthur attaque merlin !";
 echo "<br />";
 $arthur->attaque($merlin); // Merlin vie === 20 (50 - 30)
@@ -26,4 +27,12 @@ echo $arthur->afficher();
 echo "<br />";
 echo $merlin->afficher();
 
+echo "<br />";
+echo "Arthur soigne merlin !";
+echo "<br />";
+
 $arthur->soigne($merlin);
+
+echo $arthur->afficher();
+echo "<br />";
+echo $merlin->afficher();

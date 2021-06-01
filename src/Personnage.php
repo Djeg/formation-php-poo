@@ -10,7 +10,7 @@ class Personnage
 
     public function regenerer(int $vie = 20): void
     {
-        $this->vie = $this->vie + $vie;
+        $this->vie += $vie;
     }
 
     public function afficher(): string
@@ -20,6 +20,11 @@ class Personnage
 
     public function attaque(Personnage $cible): void
     {
-        $cible->vie = $cible->vie - $this->attaque;
+        $cible->vie -= $this->attaque;
+    }
+
+    public function soigne(Personnage $cible): void
+    {
+        $cible->regenerer($this->magie);
     }
 }
