@@ -11,17 +11,11 @@ require_once('../src/Personnage.php');
 // 3. Retoucher la méthode "afficher" pour afficher
 //    le nom en plus de la vie et de l'attaque.
 
-$merlin = new Personnage("Merlin l'enchanteur");
-$merlin->vie = 50;
-$merlin->attaque = 40;
+$merlin = new Personnage("Merlin l'enchanteur", 50, 40);
 
-$arthur = new Personnage("Le roi Arthur");
-$arthur->vie = 20;
-$arthur->attaque = 30;
+$arthur = new Personnage("Le roi Arthur", 20, 30);
 
-$morganne = new Personnage("Morganne la sorcière");
-$morganne->vie = 150;
-$morganne->attaque = 40;
+$morganne = new Personnage("Morganne la sorcière", 150, 40);
 
 echo $arthur->afficher();
 echo "<br />";
