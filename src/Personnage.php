@@ -8,6 +8,8 @@ class Personnage
 
     public int $magie = 30;
 
+    public string $nom;
+
     public function regenerer(int $vie = 20): void
     {
         $this->vie += $vie;
