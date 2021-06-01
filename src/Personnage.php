@@ -10,4 +10,9 @@ class Personnage
     {
         $this->vie = $this->vie + $vie;
     }
+
+    public function afficher(): string
+    {
+        return "Vie: {$this->vie}, Attaque: {$this->attaque}";
+    }
 }

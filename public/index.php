@@ -17,5 +17,6 @@ $arthur->attaque = 30;
 $arthur->regenerer(10);
 $merlin->regenerer(20);
 
-var_dump($merlin);
-var_dump($arthur);
+echo $arthur->afficher();
+echo "<br />";
+echo $merlin->afficher();
