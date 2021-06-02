@@ -1,5 +1,7 @@
 <?php
 
+namespace Game;
+
 class Chevalier extends Personnage
 {
     public function attaque(Personnage $cible): void

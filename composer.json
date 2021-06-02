@@ -1,0 +1,15 @@
+{
+    "name": "djeg/php-poo-tutorial",
+    "authors": [
+        {
+            "name": "David Jegat",
+            "email": "david.jegat@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    }
+}

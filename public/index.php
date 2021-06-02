@@ -1,12 +1,18 @@
 <?php
 
-require_once('../src/Personnage.php');
-require_once('../src/Magicien.php');
-require_once('../src/Chevalier.php');
+spl_autoload_register(function ($className) {
+    $className = str_replace('\\', '/', $className);
+    require(__DIR__ . '/../src/' . $className . '.php');
+});
+
+use Game\Personnage;
+use Game\Chevalier;
+use Game\Magicien;
 
 $merlin = new Personnage("Merlin l'enchanteur", 50, 40);
 $arthur = new Chevalier("Le roi Arthur", 20, 30);
 $morganne = new Magicien("Morganne la sorcière", 150, 40);
+$lancelot = new Chevalier("Lancelot du lac");
 
 echo $arthur->afficher();
 echo "<br />";
