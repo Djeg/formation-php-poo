@@ -1,5 +1,7 @@
 <?php
 
+namespace App;
+
 class Magicien extends Personnage
 {
     public function soigne(Personnage $cible): void

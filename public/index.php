@@ -2,10 +2,10 @@
 
 require(__DIR__ . '/../vendor/autoload.php');
 
-$merlin = new Personnage("Merlin l'enchanteur", 50, 40);
-$arthur = new Chevalier("Le roi Arthur", 20, 30);
-$morganne = new Magicien("Morganne la sorcière", 150, 40);
-$lancelot = new Chevalier("Lancelot du lac");
+$merlin = new App\Personnage("Merlin l'enchanteur", 50, 40);
+$arthur = new App\Chevalier("Le roi Arthur", 20, 30);
+$morganne = new App\Magicien("Morganne la sorcière", 150, 40);
+$lancelot = new App\Chevalier("Lancelot du lac");
 
 echo $arthur->afficher();
 echo "<br />";
