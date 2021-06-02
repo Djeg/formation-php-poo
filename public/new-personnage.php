@@ -13,43 +13,16 @@ $data = [
 
 // Séction de validation
 // Qui est-ce ou quoi est-ce qui valide ? PersonnageValidateur->valider
-
-if (!empty($_POST)) {
-
-    if (strlen($data['nom']) < 2) {
-        $errors['nom'] = "vous n'avez pas spécifié de nom pour votre personnage, ou bien le nom est trop court";
-    }
-
-    if ((int)$data['vie'] < 9 || (int)$data['vie'] > 100) {
-        $errors['vie'] = "Vous n'avez pas spécifier de vie, ou bien la vie n'est pas compris entre 10 et 100";
-    }
-
-    if ((int)$data['attaque'] < 5 || (int)$data['attaque'] > 50) {
-        $errors['attaque'] = "Vous n'avez pas spécifier d'attaque, ou bien l'attaque n'est pas compris entre 5 et 50";
-    }
-
-    if ((int)$data['magie'] < 5 || (int)$data['magie'] > 50) {
-        $errors['magie'] = "Vous n'avez pas spécifier de magie, ou bien la magie n'est pas compris entre 5 et 50";
-    }
-}
+$validateur = new App\Validateur\PersonnageValidateur();
+$errors = $validateur->valider($_POST);
 
 // séction de l'enregistrement
 // Qui / Qui est-ce qu'on enregistre ? PersonnageTable->enregistrer
 
-if (!empty($_POST) && empty($errors)) {
-    // enregistrer les données dans une base de données
-    $pdo = new PDO('mysql:dbname=mini-game;host=mysql', 'root', 'root');
-    $sql = 'INSERT INTO personnages (nom, vie, attaque, magie) VALUES (:nom, :vie, :attaque, :magie)';
+$table = new App\Table\PersonnageTable();
 
-    $request = $pdo->prepare($sql);
-    $request->execute([
-        'nom' => $data['nom'],
-        'vie' => $data['vie'],
-        'attaque' => $data['attaque'],
-        'magie' => $data['magie']
-    ]);
-
-    var_dump('Personnage enregistré !');
+if (empty($errors)) {
+    $table->enregistrer($data);
 }
 
 ?>
