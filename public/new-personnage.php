@@ -10,16 +10,9 @@ $data = [
     'magie' => isset($_POST['magie']) ? (int)$_POST['magie'] : 0
 ];
 
-
-// Séction de validation
-// Qui est-ce ou quoi est-ce qui valide ? PersonnageValidateur->valider
 $validateur = new App\Validateur\PersonnageValidateur();
-$errors = $validateur->valider($_POST);
-
-// séction de l'enregistrement
-// Qui / Qui est-ce qu'on enregistre ? PersonnageTable->enregistrer
-
-$table = new App\Table\PersonnageTable();
+$table = new App\Table\PersonnageTable($validateur);
+$errors = $table->enregistrer($data);
 
 if (empty($errors)) {
     $table->enregistrer($data);
