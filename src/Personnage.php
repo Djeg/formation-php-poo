@@ -1,7 +1,5 @@
 <?php
 
-namespace Game;
-
 class Personnage
 {
     protected int $vie;

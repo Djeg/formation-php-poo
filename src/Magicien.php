@@ -1,7 +1,5 @@
 <?php
 
-namespace Game;
-
 class Magicien extends Personnage
 {
     public function soigne(Personnage $cible): void

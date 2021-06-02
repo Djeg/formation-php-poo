@@ -1,13 +1,6 @@
 <?php
 
-spl_autoload_register(function ($className) {
-    $className = str_replace('\\', '/', $className);
-    require(__DIR__ . '/../src/' . $className . '.php');
-});
-
-use Game\Personnage;
-use Game\Chevalier;
-use Game\Magicien;
+require(__DIR__ . '/../vendor/autoload.php');
 
 $merlin = new Personnage("Merlin l'enchanteur", 50, 40);
 $arthur = new Chevalier("Le roi Arthur", 20, 30);
