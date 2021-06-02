@@ -10,6 +10,10 @@ $data = [
     'magie' => isset($_POST['magie']) ? (int)$_POST['magie'] : 0
 ];
 
+
+// Séction de validation
+// Qui est-ce ou quoi est-ce qui valide ? PersonnageValidateur->valider
+
 if (!empty($_POST)) {
 
     if (strlen($data['nom']) < 2) {
@@ -28,6 +32,9 @@ if (!empty($_POST)) {
         $errors['magie'] = "Vous n'avez pas spécifier de magie, ou bien la magie n'est pas compris entre 5 et 50";
     }
 }
+
+// séction de l'enregistrement
+// Qui / Qui est-ce qu'on enregistre ? PersonnageTable->enregistrer
 
 if (!empty($_POST) && empty($errors)) {
     // enregistrer les données dans une base de données
