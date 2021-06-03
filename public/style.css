@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+.menu .item {
+  margin-right: 2rem;
+}
+
+.menu .item a {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  font-family: "Mate SC", serif;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 60%;
+  min-width: 10%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+  transition: transform 0.25s;
+}
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+.container * {
+  color: #fff;
+  font-family: "Mate SC", serif;
+}
+
+.container h1 {
+  color: #fff;
+  text-align: center;
+  font-family: "Mate SC", serif;
+  margin-bottom: 1.6rem;
+}
+
+form > div {
+  display: flex;
+  margin-bottom: 0.6rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+form > div:last-child {
+  justify-content: center;
+  padding-top: 0.6rem;
+}
+
+form > div label,
+form > div input {
+  display: block;
+}
+
+form button {
+  background-color: rgba(39, 85, 73, 0.2);
+  backdrop-filter: blur(30px);
+  border-radius: 5px;
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+form button:hover {
+  transform: scale(1.25);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+form input {
+  padding: 0.8rem;
+  border: none;
+  outline: none;
+  background-color: rgba(0, 24, 19, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
+  color: white;
+}
