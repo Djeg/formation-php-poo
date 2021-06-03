@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Table;
+namespace App\Model\Table;
 
 use App\Validateur\PersonnageValidateur;
 use PDO;
-use App\Personnage;
+use App\Model\Personnage;
 
 class PersonnageTable
 {

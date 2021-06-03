@@ -2,7 +2,7 @@
 
 namespace App\Validateur;
 
-use App\Personnage;
+use App\Model\Personnage;
 
 class PersonnageValidateur
 {

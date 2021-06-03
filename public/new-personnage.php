@@ -2,7 +2,7 @@
 
 require(__DIR__ . '/../vendor/autoload.php');
 
-$perso = new App\Personnage(
+$perso = new App\Model\Personnage(
     isset($_POST['nom']) ? $_POST['nom'] : '',
     isset($_POST['vie']) ? (int)$_POST['vie'] : 0,
     isset($_POST['attaque']) ? (int)$_POST['attaque'] : 0,
@@ -11,7 +11,7 @@ $perso = new App\Personnage(
 
 if (!empty($_POST)) {
     $validateur = new App\Validateur\PersonnageValidateur();
-    $table = new App\Table\PersonnageTable($validateur);
+    $table = new App\Model\Table\PersonnageTable($validateur);
     $errors = $table->enregistrer($perso);
 }
 

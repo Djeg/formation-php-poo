@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Model;
 
 // 1. Récupérer les fichiers suivant:
 //     - public/new-personnage.php
