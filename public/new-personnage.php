@@ -2,21 +2,16 @@
 
 require(__DIR__ . '/../vendor/autoload.php');
 
-$errors = [];
-$data = [
-    'nom' => isset($_POST['nom']) ? $_POST['nom'] : '',
-    'vie' => isset($_POST['vie']) ? (int)$_POST['vie'] : 0,
-    'attaque' => isset($_POST['attaque']) ? (int)$_POST['attaque'] : 0,
-    'magie' => isset($_POST['magie']) ? (int)$_POST['magie'] : 0
-];
+$perso = new App\Personnage(
+    isset($_POST['nom']) ? $_POST['nom'] : '',
+    isset($_POST['vie']) ? (int)$_POST['vie'] : 0,
+    isset($_POST['attaque']) ? (int)$_POST['attaque'] : 0,
+    isset($_POST['magie']) ? (int)$_POST['magie'] : 0
+);
 
 $validateur = new App\Validateur\PersonnageValidateur();
 $table = new App\Table\PersonnageTable($validateur);
-$errors = $table->enregistrer($data);
-
-if (empty($errors)) {
-    $table->enregistrer($data);
-}
+$errors = $table->enregistrer($perso);
 
 ?>
 <form action="./new-personnage.php" method="post">
