@@ -6,6 +6,11 @@ use App\Model\Personnage;
 use App\Model\Table\PersonnageTable;
 use App\Validateur\PersonnageValidateur;
 
+// 1. Dans la méthode index de PersonnageController, afficher
+//    la View "index.php"
+// 2. Dans le fichier public/index.php utilisé la méthode index
+//    de PersonnageController et supprimer tout le reste !
+
 class PersonnageController
 {
     public function index(): void
