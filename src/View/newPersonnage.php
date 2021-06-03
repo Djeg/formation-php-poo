@@ -1,3 +1,5 @@
+<?php include __DIR__ . '/partials/documentStart.php'; ?>
+
 <form action="./new-personnage.php" method="post">
     <div>
         <?php if (isset($errors['nom'])) { ?>
@@ -33,3 +35,5 @@
         <button type="submit">Créer le personnage</button>
     </div>
 </form>
+
+<?php include __DIR__ . '/partials/documentEnd.php'; ?>
