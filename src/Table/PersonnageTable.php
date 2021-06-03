@@ -29,10 +29,10 @@ class PersonnageTable
 
         $request = $pdo->prepare($sql);
         $request->execute([
-            'nom' => $data['nom'],
-            'vie' => $data['vie'],
-            'attaque' => $data['attaque'],
-            'magie' => $data['magie']
+            'nom' => $perso->getNom(),
+            'vie' => $perso->getVie(),
+            'attaque' => $perso->getAttaque(),
+            'magie' => $perso->getMagie()
         ]);
 
         var_dump('Personnage enregistré !');

@@ -9,9 +9,11 @@ $perso = new App\Personnage(
     isset($_POST['magie']) ? (int)$_POST['magie'] : 0
 );
 
-$validateur = new App\Validateur\PersonnageValidateur();
-$table = new App\Table\PersonnageTable($validateur);
-$errors = $table->enregistrer($perso);
+if (!empty($_POST)) {
+    $validateur = new App\Validateur\PersonnageValidateur();
+    $table = new App\Table\PersonnageTable($validateur);
+    $errors = $table->enregistrer($perso);
+}
 
 ?>
 <form action="./new-personnage.php" method="post">
@@ -22,28 +24,28 @@ $errors = $table->enregistrer($perso);
         <label for="nom">
             Nom du personnage :
         </label>
-        <input type="text" name="nom" id="nom" value="<?php echo $data['nom']; ?>">
+        <input type="text" name="nom" id="nom" value="<?php echo $perso->getNom(); ?>">
     </div>
     <div>
         <?php if (isset($errors['vie'])) { ?>
             <p><?php echo $errors['vie']; ?></p>
         <?php } ?>
         <label for="vie">Vie du personnage :</label>
-        <input type="number" name="vie" id="vie" value="<?php echo $data['vie']; ?>">
+        <input type="number" name="vie" id="vie" value="<?php echo $perso->getVie(); ?>">
     </div>
     <div>
         <?php if (isset($errors['attaque'])) { ?>
             <p><?php echo $errors['attaque']; ?></p>
         <?php } ?>
         <label for="attaque">Attaque du personnage :</label>
-        <input type="number" name="attaque" id="attaque" value="<?php echo $data['attaque']; ?>">
+        <input type="number" name="attaque" id="attaque" value="<?php echo $perso->getAttaque(); ?>">
     </div>
     <div>
         <?php if (isset($errors['magie'])) { ?>
             <p><?php echo $errors['magie']; ?></p>
         <?php } ?>
         <label for="magie">Magie du personnage :</label>
-        <input type="number" name="magie" id="magie" value="<?php echo $data['magie']; ?>">
+        <input type="number" name="magie" id="magie" value="<?php echo $perso->getMagie(); ?>">
     </div>
     <div>
         <button type="submit">Créer le personnage</button>
