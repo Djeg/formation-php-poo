@@ -35,8 +35,29 @@ class PersonnageTable
             'magie' => $perso->getMagie()
         ]);
 
-        var_dump('Personnage enregistré !');
-
         return [];
+    }
+
+    public function toutRecuperer(): array
+    {
+        // enregistrer les données dans une base de données
+        $pdo = new PDO('mysql:dbname=mini-game;host=mysql', 'root', 'root');
+        $sql = 'SELECT * from personnages ORDER BY id DESC';
+
+        $request = $pdo->prepare($sql);
+        $request->execute();
+        $data = $request->fetchAll();
+        $personnages = [];
+
+        foreach ($data as $persoData) {
+            $personnages[] = new Personnage(
+                $persoData['nom'],
+                $persoData['vie'],
+                $persoData['attaque'],
+                $persoData['magie']
+            );
+        }
+
+        return $personnages;
     }
 }

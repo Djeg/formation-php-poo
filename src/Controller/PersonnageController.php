@@ -8,9 +8,9 @@ use App\Validateur\PersonnageValidateur;
 
 class PersonnageController
 {
-    public function index(): void
+    public function accueil(): void
     {
-        include __DIR__ . '/../View/index.php';
+        include __DIR__ . '/../View/accueil.php';
     }
 
     public function newPersonnage(): void

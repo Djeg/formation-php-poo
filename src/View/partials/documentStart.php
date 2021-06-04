@@ -14,7 +14,7 @@
 <body>
     <nav class="menu">
         <div class="item">
-            <a href="./index.php?page=index">Accueil</a>
+            <a href="./index.php?page=accueil">Accueil</a>
         </div>
         <div class="item">
             <a href="./index.php?page=newPersonnage">Nouveau perso</a>
