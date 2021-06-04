@@ -10,9 +10,12 @@ class PersonnageTable
 {
     private PersonnageValidateur $validateur;
 
-    public function __construct(PersonnageValidateur $validateur)
+    private PDO $pdo;
+
+    public function __construct(PersonnageValidateur $validateur, PDO $pdo)
     {
         $this->validateur = $validateur;
+        $this->pdo = $pdo;
     }
 
     public function enregistrer(Personnage $perso): array
@@ -24,10 +27,9 @@ class PersonnageTable
         }
 
         // enregistrer les données dans une base de données
-        $pdo = new PDO('mysql:dbname=mini-game;host=mysql', 'root', 'root');
         $sql = 'INSERT INTO personnages (nom, vie, attaque, magie) VALUES (:nom, :vie, :attaque, :magie)';
 
-        $request = $pdo->prepare($sql);
+        $request = $this->pdo->prepare($sql);
         $request->execute([
             'nom' => $perso->getNom(),
             'vie' => $perso->getVie(),
@@ -41,10 +43,9 @@ class PersonnageTable
     public function toutRecuperer(): array
     {
         // enregistrer les données dans une base de données
-        $pdo = new PDO('mysql:dbname=mini-game;host=mysql', 'root', 'root');
         $sql = 'SELECT * from personnages ORDER BY id DESC';
 
-        $request = $pdo->prepare($sql);
+        $request = $this->pdo->prepare($sql);
         $request->execute();
         $data = $request->fetchAll();
         $personnages = [];
