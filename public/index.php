@@ -92,6 +92,20 @@ if (!$estMajeur) {
 
 $notes = [12, 4, 18, 6, 16, 19, 5, 14, 16];
 
+foreach ($notes as $index => $note) {
+    if ($note >= 10) {
+        echo "<p>Note n°$index : $note/20</p>";
+    }
+}
+
+foreach ($notes as $index => $note) {
+    if ($note < 10) {
+        continue;
+    }
+
+    echo "<p>Note n°$index : $note/20</p>";
+}
+
 ?>
 
 <h1>
