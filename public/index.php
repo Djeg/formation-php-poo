@@ -95,6 +95,16 @@ $notes = [12, 4, 18, 6, 16, 19, 5, 14, 16];
 foreach ($notes as $index => $note) {
     if ($note >= 10) {
         echo "<p>Note n°$index : $note/20</p>";
+        echo "<p>Note n°$index : $note/20</p>";
+        echo "<p>Note n°$index : $note/20</p>";
+
+        echo "<p>Note n°$index : $note/20</p>";
+        echo "<p>Note n°$index : $note/20</p>";
+
+        echo "<p>Note n°$index : $note/20</p>";
+
+        echo "<p>Note n°$index : $note/20</p>";
+        echo "<p>Note n°$index : $note/20</p>";
     }
 }
 
@@ -103,6 +113,15 @@ foreach ($notes as $index => $note) {
         continue;
     }
 
+    echo "<p>Note n°$index : $note/20</p>";
+    echo "<p>Note n°$index : $note/20</p>";
+
+    echo "<p>Note n°$index : $note/20</p>";
+    echo "<p>Note n°$index : $note/20</p>";
+
+    echo "<p>Note n°$index : $note/20</p>";
+    echo "<p>Note n°$index : $note/20</p>";
+    echo "<p>Note n°$index : $note/20</p>";
     echo "<p>Note n°$index : $note/20</p>";
 }
 
@@ -121,3 +140,43 @@ foreach ($notes as $index => $note) {
         <li>Note <?php echo $index + 1; ?> : <?php echo $note; ?>/20</li>
     <?php } ?>
 </ul>
+
+
+<?php
+
+/**
+ * NE JAMAIS FAIRE DE ECHO DANS UNE FONCTION
+ */
+function additionner(int $chiffre1 = 0, int $chiffre2 = 0)
+{
+    return $chiffre1 + $chiffre2; // affiche sur la page le chiffre "7"
+}
+
+function nomComplet(string $nom, string $prenom)
+{
+    return $nom . ' ' . $prenom;
+}
+
+function bonjour(string $personne)
+{
+    return 'Bonjour ' . $personne;
+}
+
+$phrase = bonjour(nomComplet('john', 'doe')); // string(Bonjour john doe)
+
+$x = additionner(); // int(0)
+$x = additionner(10); // int(10)
+$x = additionner(10, 10); // int(20)
+$a = additionner(5, 2); // null
+$b = additionner($a, 10); // Fatal Error
+
+$eleve = [
+    'nom' => 'Dupont',
+    'prenom' => 'Rose',
+]
+
+?>
+
+<h1>
+    <?php echo bonjour(nomComplet($eleve['nom'], $eleve['prenom'])); ?>
+</h1>
