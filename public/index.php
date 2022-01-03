@@ -57,8 +57,40 @@ $eleve = [
 
 echo $eleve['nom']; // string(Dupont)
 echo $eleve['prenom']; // string(Jean)
-echo $eleve['notes']; // array([14, 12 ...])
 echo $eleve['notes'][2]; // int(8)
+
+echo $eleve['nom'] . ' ' . $eleve['prenom'] . ' (notes: ' . $eleve['notes'][0] . ')';
+
+echo "{$eleve['nom']} {$eleve['prenom']} (notes: {$eleve['notes'][0]}, {$eleve['notes'][1]})";
+
+
+$age = 9; // int(9)
+
+if ($age >= 18) {
+    echo 'Vous etes majeur';
+    echo 'genial';
+    echo 'super';
+} else {
+    echo 'Vous etes mineur';
+}
+
+if ($age == '9'/* string(9) */) {
+    echo 'Vous avez 9 ans';
+}
+
+if ($age === '9' || $age === '8') {
+    echo 'Vous avez 9 ans';
+}
+
+if ($age >= 18 && $age <= 25) {
+}
+
+$estMajeur = $age >= 18; // boolean(false)
+
+if (!$estMajeur) {
+}
+
+$notes = [12, 4, 18, 6, 16, 19, 5, 14, 16];
 
 ?>
 
@@ -71,5 +103,7 @@ echo $eleve['notes'][2]; // int(8)
 </p>
 <h3>Vos notes</h3>
 <ul>
-    <li>Note 1 : <?php echo $notes[0]; ?>/20</li>
+    <?php foreach ($notes as $index => $note) { ?>
+        <li>Note <?php echo $index + 1; ?> : <?php echo $note; ?>/20</li>
+    <?php } ?>
 </ul>
