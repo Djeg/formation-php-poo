@@ -1,21 +1,25 @@
 <?php
 
-// Cette ligne nous d'importer un fichier php
 require_once 'Personnage.php';
 
-// Création des instances de Personnages
-$arthur = new Personnage();
-$arthur->vie = 90;
-$arthur->attaque = 50;
+$arthur = new Personnage('Roi Arthur', 80, 40);
 
-$arthur->regenerer();
+$merlin = new Personnage("Merlin l'enchanteur");
+$merlin->vie = 70;
+$merlin->attaque = 50;
 
-$merlin = new Personnage();
-$merlin->vie = 80;
-$merlin->attaque = 60;
+$morganne = new Personnage('Morganne la fée');
 
-$merlin->regenerer(30);
+echo $arthur->afficher();
+echo $merlin->afficher();
+echo $morganne->afficher();
 
-// On debug ce que contient des variables
-var_dump($arthur);
-var_dump($merlin);
+$arthur->attaquer($merlin);
+
+echo $arthur->afficher();
+echo $merlin->afficher();
+
+$merlin->regenerer(90);
+
+echo $arthur->afficher();
+echo $merlin->afficher();
