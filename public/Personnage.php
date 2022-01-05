@@ -1,12 +1,31 @@
 <?php
 
+/*
+Dans une classe nous aurons dans l'ordre, les parties
+les plus importante au parties les moins importantes:
+
+1. Propriétés (public)
+2. Propriétés (protected)
+3. Propriétés (private)
+
+4. Constructeur ! 
+
+5. les méthodes (public): Mettre les getters et setters à la suite !
+6. les méthodes (protected)
+7. les méthodes (private)
+*/
+
+// ENCAPSULATION: TOUTES LES PROPRIÉTÉS D'UN OBJET DOIVENT ETRE
+//                PRIVATE OU PROTECTED (POUR RENDRE LES OBJET IMMUABLE)
+// GETTER ET SETTERS: LE GETTER PERMET DE RECUPERER UNE PROPRIETE PRIVATE / PROTECTED.
+//                    LE SETTER PERMET DE CHANGE UNE PROPRIETE PRIVATE / PROTECTED.
 class Personnage
 {
-    public int $vie = 100;
+    private int $vie;
 
-    public int $attaque = 20;
+    private int $attaque;
 
-    public string $nom;
+    private string $nom;
 
     public function __construct(string $nom, int $vie = 100, int $attaque = 20)
     {
@@ -15,9 +34,22 @@ class Personnage
         $this->attaque = $attaque;
     }
 
-    public function afficher(): string
+    public function setVie(int $vie): void
     {
-        return "<p><strong>{$this->nom}</strong> - Vie: {$this->vie}, Attaque: {$this->attaque}</p>";
+        $this->vie = $vie;
+
+        if ($this->vie < 0) {
+            $this->vie = 0;
+        }
+
+        if ($this->vie > 100) {
+            $this->vie = 100;
+        }
+    }
+
+    public function getVie(): int
+    {
+        return $this->vie;
     }
 
     public function attaquer(Personnage $cible): void
@@ -27,10 +59,11 @@ class Personnage
 
     public function regenerer(int $vie = 100): void
     {
-        $this->vie += $vie;
+        $this->setVie($this->vie + $vie);
+    }
 
-        if ($this->vie > 100) {
-            $this->vie = 100;
-        }
+    public function afficher(): string
+    {
+        return "<p><strong>{$this->nom}</strong> - Vie: {$this->vie}, Attaque: {$this->attaque}</p>";
     }
 }
