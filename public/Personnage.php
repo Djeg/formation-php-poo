@@ -19,17 +19,20 @@ les plus importante au parties les moins importantes:
 //                PRIVATE OU PROTECTED (POUR RENDRE LES OBJET IMMUABLE)
 // GETTER ET SETTERS: LE GETTER PERMET DE RECUPERER UNE PROPRIETE PRIVATE / PROTECTED.
 //                    LE SETTER PERMET DE CHANGE UNE PROPRIETE PRIVATE / PROTECTED.
+/**
+ * Plan de construction d'un personnage du jeux
+ */
 class Personnage
 {
-    private int $vie;
+    protected int $vie;
 
-    private int $vieMaximum;
+    protected int $vieMaximum;
 
-    private int $attaque;
+    protected int $attaque;
 
-    private int $attaqueMaximum;
+    protected int $attaqueMaximum;
 
-    private string $nom;
+    protected string $nom;
 
     public function __construct(string $nom)
     {
@@ -40,11 +43,20 @@ class Personnage
         $this->attaqueMaximum = 100;
     }
 
+    /**
+     * Retourne la propriété privée "$nom"
+     */
     public function getNom(): string
     {
         return $this->nom;
     }
 
+    /**
+     * Change la vie du personnage en lui specifiant
+     * le montant de la nouvelle vie. Cette vie ne peut
+     * pas descendre en dessous de 0 ou de monter au
+     * dessus de la vie maximal du personnage.
+     */
     public function setVie(int $vie): void
     {
         $this->vie = $vie;
@@ -63,6 +75,11 @@ class Personnage
         return $this->vie;
     }
 
+    /**
+     * Change l'attaque du personnage. Attention,
+     * l'attaque ne peut pas descendre en dessous de 1
+     * et monter au dessus de l'attaque maximal du personnage.
+     */
     public function setAttaque(int $attaque): void
     {
         $this->attaque = $attaque;
@@ -81,6 +98,10 @@ class Personnage
         return $this->attaque;
     }
 
+    /**
+     * Attaque le personnage cible en lui retirant
+     * l'attaque du personnage.
+     */
     public function attaquer(Personnage $cible): void
     {
         $cible->setVie($cible->vie - $this->attaque);
@@ -93,10 +114,6 @@ class Personnage
 
     public function estMort(): bool
     {
-        if ($this->vie === 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return $this->vie === 0;
     }
 }

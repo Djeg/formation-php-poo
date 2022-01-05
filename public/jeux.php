@@ -1,6 +1,7 @@
 <?php
 
 require_once 'Personnage.php';
+require_once 'Magicien.php';
 
 /**
  * 1. Créer ou modifier la class Personnage
@@ -43,14 +44,23 @@ require_once 'Personnage.php';
  *    - faux si le personnage a plus de 0 points de vie.
  */
 
+$vie = 100;
+$estMort = $vie === 0;
 
-$arthur = new Personnage('Roi Arthur', 80, 40);
-$merlin = new Personnage("Merlin l'enchanteur");
+var_dump($estMort); // boolean false
+
+
+$arthur = new Personnage('Roi Arthur');
+$merlin = new Magicien("Merlin l'enchanteur");
 $morganne = new Personnage('Morganne la fée');
 
-echo "Arthiur à {$arthur->getVie()} point de vie";
+var_dump($arthur);
+var_dump($merlin);
+
+
 
 $arthur->setVie(180);
+$arthur->getNom();
 
 $arthur->attaquer($merlin);
 
