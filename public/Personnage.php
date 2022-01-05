@@ -23,15 +23,26 @@ class Personnage
 {
     private int $vie;
 
+    private int $vieMaximum;
+
     private int $attaque;
+
+    private int $attaqueMaximum;
 
     private string $nom;
 
-    public function __construct(string $nom, int $vie = 100, int $attaque = 20)
+    public function __construct(string $nom)
     {
         $this->nom = $nom;
-        $this->vie = $vie;
-        $this->attaque = $attaque;
+        $this->vie = 100;
+        $this->vieMaximum = 100;
+        $this->attaque = 20;
+        $this->attaqueMaximum = 100;
+    }
+
+    public function getNom(): string
+    {
+        return $this->nom;
     }
 
     public function setVie(int $vie): void
@@ -42,8 +53,8 @@ class Personnage
             $this->vie = 0;
         }
 
-        if ($this->vie > 100) {
-            $this->vie = 100;
+        if ($this->vie > $this->vieMaximum) {
+            $this->vie = $this->vieMaximum;
         }
     }
 
@@ -52,9 +63,27 @@ class Personnage
         return $this->vie;
     }
 
+    public function setAttaque(int $attaque): void
+    {
+        $this->attaque = $attaque;
+
+        if ($this->attaque < 1) {
+            $this->attaque = 1;
+        }
+
+        if ($this->attaque > $this->attaqueMaximum) {
+            $this->attaque = $this->attaqueMaximum;
+        }
+    }
+
+    public function getAttaque(): int
+    {
+        return $this->attaque;
+    }
+
     public function attaquer(Personnage $cible): void
     {
-        $cible->vie -= $this->attaque;
+        $cible->setVie($cible->vie - $this->attaque);
     }
 
     public function regenerer(int $vie = 100): void
@@ -62,8 +91,12 @@ class Personnage
         $this->setVie($this->vie + $vie);
     }
 
-    public function afficher(): string
+    public function estMort(): bool
     {
-        return "<p><strong>{$this->nom}</strong> - Vie: {$this->vie}, Attaque: {$this->attaque}</p>";
+        if ($this->vie === 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

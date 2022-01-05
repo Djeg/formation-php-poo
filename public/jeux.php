@@ -52,16 +52,12 @@ echo "Arthiur à {$arthur->getVie()} point de vie";
 
 $arthur->setVie(180);
 
-echo $arthur->afficher();
-echo $merlin->afficher();
-echo $morganne->afficher();
-
 $arthur->attaquer($merlin);
 
-echo $arthur->afficher();
-echo $merlin->afficher(); // 30
-
+// merlin 80
 $merlin->regenerer(10);
+// merlin 90
 
-echo $arthur->afficher();
-echo $merlin->afficher();
+// merlin 80
+$merlin->setVie(10);
+// merlin 10
