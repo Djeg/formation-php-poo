@@ -2,19 +2,15 @@
 
 require_once 'HTMLElement.php';
 
-$form = new HTMLElement('form');
-$div = new HTMLElement('div');
-$p = new HTMLElement('p');
+$div = new HTMLElement('div', ['class' => 'super-class coucou']);
+$a = new HTMLElement('a', [
+    'href' => '/mon-lien',
+    'class' => 'red',
+]);
 
-?>
-<?php echo $form->start(); ?>
-<input type="text" />
-<?php echo $form->end(); ?>
+echo $div->start(); // <div class="super-class coucou">
 
-<?php echo $div->start(); ?>
+echo $a->start(); // <a href="/mon-lien" class="red">
+echo $a->end(); // </a>
 
-<?php echo $p->start(); ?>
-Coucou
-<?php echo $p->end(); ?>
-
-<?php echo $div->end(); ?>
+echo $div->end(); // </div>
