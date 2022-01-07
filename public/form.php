@@ -1,16 +1,22 @@
 <?php
 
 require_once 'HTMLElement.php';
+require_once 'HTMLForm.php';
 
-$div = new HTMLElement('div', ['class' => 'super-class coucou']);
-$a = new HTMLElement('a', [
-    'href' => '/mon-lien',
-    'class' => 'red',
+$separateur = new HTMLElement('div', [
+    'class' => 'separator',
 ]);
 
-echo $div->start(); // <div class="super-class coucou">
+$loginForm = new HTMLForm($separateur, [
+    'method' => 'POST',
+]);
 
-echo $a->start(); // <a href="/mon-lien" class="red">
-echo $a->end(); // </a>
 
-echo $div->end(); // </div>
+?>
+<?php echo $loginForm->start(); ?>
+
+<?php echo $loginForm->widget('Email :', 'email', 'email'); ?>
+<?php echo $loginForm->widget('Mot de passe :', 'password', 'password'); ?>
+<?php echo $loginForm->widget('Répéter le mot de passe', 'password', 'repeat-password'); ?>
+
+<?php echo $loginForm->end(); ?>
