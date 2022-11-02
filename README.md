@@ -1,6 +1,6 @@
 # PHP POO Tutoriel
 
-Bienvenue dans la formation php POO (programmation orientée objet)
+Bienvenue dans la formation php POO (programmation orientée objet) du 02-11-2022 au 04-11-2022
 
 ## Le support de cours :
 
@@ -11,3 +11,5 @@ Vous pouvez aussi le télécharger [ici](./assets/php-poo-training.pdf)
 ## Les exercices :
 
 - [Exercice 1 : Le Personnage](./exercices/Exercice%201%20%3A%20Le%20Personnage.md)
+
+## Les corrections :
