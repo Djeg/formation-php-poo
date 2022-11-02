@@ -11,6 +11,7 @@ Vous pouvez aussi le télécharger [ici](./assets/php-poo-training.pdf)
 ## Les exercices :
 
 - [Exercice 1 : Le Personnage](./exercices/Exercice%201%20%3A%20Le%20Personnage.md)
+- [Exercice 2 : Le Personnage](./exercices/Exercice%202%20%3A%20Le%20Personnage%20et%20classes.md)
 
 ## Les corrections :
 
