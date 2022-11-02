@@ -13,3 +13,5 @@ Vous pouvez aussi le télécharger [ici](./assets/php-poo-training.pdf)
 - [Exercice 1 : Le Personnage](./exercices/Exercice%201%20%3A%20Le%20Personnage.md)
 
 ## Les corrections :
+
+- [Exercice 1 : Le personnage](https://github.com/Djeg/formation-php-poo/commit/c0e280543947374e25e3c9e11dcc4c79bc9838b5)
