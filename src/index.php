@@ -5,13 +5,13 @@
  */
 class Character
 {
-    public string $name;
+    protected string $name;
 
-    public int $life = 100;
+    protected int $life = 100;
 
-    public int $maxLife = 100;
+    protected int $maxLife = 100;
 
-    public int $attack = 40;
+    protected int $attack = 40;
 
     public function __construct(string $name)
     {
