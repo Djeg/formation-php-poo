@@ -15,6 +15,7 @@ Vous retrouverez aussi le support de cours concernant le terminal [ici](./assets
 - [Exercice 1 : Le Personnage](./assets/exercices/exo-1-personnage.md)
 - [Exercice 2 : Le Personnage](./assets/exercices/exo-2-personnage.md)
 - [Exercice 3 : Le Jeux](./assetes/exercices/exo-3-jeux.md)
+- [Exercice 4 : Le Jeux](./assetes/exercices/exo-4-character.md)
 
 ## Les corrections :
 
