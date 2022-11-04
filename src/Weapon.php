@@ -14,7 +14,7 @@ class Weapon
 
     protected int $damage;
 
-    public function __construct(string $name, int $damage = 10)
+    public function __construct(string $name = 'Main Nue', int $damage = 5)
     {
         $this->name = $name;
         $this->damage = $damage;

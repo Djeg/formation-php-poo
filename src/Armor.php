@@ -13,7 +13,7 @@ class Armor
 
     protected int $protection;
 
-    public function __construct(string $name, int $protection = 10)
+    public function __construct(string $name = 'Sous Vêtements', int $protection = 1)
     {
         $this->name = $name;
         $this->protection = $protection;
