@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App;
 
+use App\Action\Action;
+
 /**
  * Représente un personnage de notre jeux
  */
@@ -127,5 +129,13 @@ class Character
                 {$this->weapon}
                 {$this->armor}
         ";
+    }
+
+    /**
+     * Cette méthode lance une action.
+     */
+    public function doAction(Action $action, Character $target = null): void
+    {
+        $action->execute($this, $target);
     }
 }

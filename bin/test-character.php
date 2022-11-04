@@ -1,5 +1,6 @@
 <?php
 
+use App\Action\AttackAction;
 use App\Armor;
 use App\Character;
 use App\Weapon;
@@ -19,3 +20,21 @@ $arthur->equipArmor(new Armor('Cuirasse', 20));
 
 echo $arthur;
 echo $merlin;
+
+echo "Merlin attaque Arthur !\n";
+
+$merlin->doAction(new AttackAction('Attaque'), $arthur);
+
+echo $arthur;
+echo $merlin;
+
+echo "Arthur attaque Merlin !\n";
+
+$arthur->doAction(new AttackAction('Attaque'), $merlin);
+
+echo $arthur;
+echo $merlin;
+
+echo "Est-ce que merlin est mort ? \n";
+
+echo $merlin->isDead();
