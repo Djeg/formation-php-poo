@@ -1,3 +1,8 @@
+## Exerice 2 : Personnage la suite
+
+Toujours dans le fichier `src/index.php` placer le code suivant :
+
+```php
 <?php
 
 /**
@@ -131,3 +136,4 @@ $characters[1]->charm($characters[0]);
 foreach ($characters as $character) {
     echo $character;
 }
+```

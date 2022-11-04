@@ -8,11 +8,13 @@ Vous retrouverez le support de cours juste [ici](https://slides.com/davidjegat-1
 
 Vous pouvez aussi le télécharger [ici](./assets/php-poo-training.pdf)
 
+Vous retrouverez aussi le support de cours concernant le terminal [ici](./assets/terminal.md) (on en téchargement [ici](./assets/terminal.pdf))
+
 ## Les exercices :
 
-- [Exercice 1 : Le Personnage](./exercices/exo-1-personnage.md)
-- [Exercice 2 : Le Personnage](./exercices/exo-2-personnage.md)
-- [Exercice 3 : Le Jeux](./exercices/exo-3-jeux.md)
+- [Exercice 1 : Le Personnage](./assets/exercices/exo-1-personnage.md)
+- [Exercice 2 : Le Personnage](./assets/exercices/exo-2-personnage.md)
+- [Exercice 3 : Le Jeux](./assetes/exercices/exo-3-jeux.md)
 
 ## Les corrections :
 

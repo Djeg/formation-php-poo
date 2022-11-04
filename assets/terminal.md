@@ -1,19 +1,13 @@
 # Le Terminal (ou la ligne de commande)
 
-Si vous souhaitez devenir hacker, ou simplement developpeur
-web agérie il est obligatoire d'apprendre à utiliser un
-terminal (ou ligne de commande) !
+Si vous souhaitez devenir hacker, ou simplement developpeur web agérie il est obligatoire d'apprendre à utiliser un terminal (ou ligne de commande) !
 
 ## Les commandes de base
 
-Un terminal est ouvert dans un répertoire. Nous pouvons à l'aide
-de commande manipuler notre ordinateur :
+Un terminal est ouvert dans un répertoire. Nous pouvons à l'aide de commande manipuler notre ordinateur :
 
-- `pwd` : (Print Working Directory) affiche le répertoire dans
-  lequel vous vous situé
-- `ls` : (list) affiche tout les fichiers et dossier du répertoire
-  dans lequel on se trouve. Nous pouvons utiliser les options : `lah`
-  afin d'afficher bien plus d'information (`ls -lah`)
+- `pwd` : (Print Working Directory) affiche le répertoire dans lequel vous vous situé
+- `ls` : (list) affiche tout les fichiers et dossier du répertoire dans lequel on se trouve. Nous pouvons utiliser les options : `lah` afin d'afficher bien plus d'information (`ls -lah`)
 - `clear` : Efface le contenu du terminal
 - `cd` : (Change Directory) permet de changer de répertoire :
   - `cd nomDuRepertoire` : Se déplace dans un dossier
@@ -32,14 +26,9 @@ de commande manipuler notre ordinateur :
 
 ## Les binaires
 
-Nous avons dans notre ordinateurs des programmes que l'on
-nomme les « binaires ». Ces derniers sont de simple fichiers
-écrit souvent dans un langage de programmation (JavaScript, Python,
-C, C++ etc ...).
+Nous avons dans notre ordinateurs des programmes que l'on nomme les « binaires ». Ces derniers sont de simple fichiers écrit souvent dans un langage de programmation (JavaScript, Python, C, C++ etc ...).
 
-Ces programmes (ou fichiers) sont rangé dans répertoires spécifique
-de notre système. Pour connaître ces répertoires il faut taper la
-commande :
+Ces programmes (ou fichiers) sont rangé dans répertoires spécifique de notre système. Pour connaître ces répertoires il faut taper la commande :
 
 ```sh
 echo $PATH
@@ -47,14 +36,11 @@ echo $PATH
 
 ## Utiliser php et composer
 
-Lorsque l'on développe un programme dans un langage il faut
-pouvoir le lancer (ou dit éxécuter le programme). Pour cela
-il éxiste 2 grandes familles de langage de programmation :
+Lorsque l'on développe un programme dans un langage il faut pouvoir le lancer (ou dit éxécuter le programme). Pour cela il éxiste 2 grandes familles de langage de programmation :
 
 ### Les langages compilés :
 
-Ce sont des langages que l'on vas « compilé » (transformer
-en binaire (des 0 et des 1)).
+Ce sont des langages que l'on vas « compilé » (transformer en binaire (des 0 et des 1)).
 
 Les avantages principaux :
 
@@ -75,8 +61,7 @@ Les langages les plus cèlébre :
 
 ### Les langages interprétés:
 
-Ce sont des langages que l'on vas « interprété » (c'est un programme
-de notre ordinateurs qui s'occupe de TOUT !)
+Ce sont des langages que l'on vas « interprété » (c'est un programme de notre ordinateurs qui s'occupe de TOUT !)
 
 Les avantages :
 
@@ -95,9 +80,7 @@ Les langages les plus cèlèbre :
 
 ### Utiliser php
 
-Lorsque nous avons écrit un fichier php, il est possible de l'éxécuter
-sur notre ordinateur sans passer par un navigateur. Pour cela
-il suffit de lancer la commande :
+Lorsque nous avons écrit un fichier php, il est possible de l'éxécuter sur notre ordinateur sans passer par un navigateur. Pour cela il suffit de lancer la commande :
 
 ```
 php monScript.php
@@ -113,9 +96,7 @@ php -a
 
 ### Lancer votre propre Serveur !
 
-Il est possible d'utiliser php pour lancer son propre serveur
-web. C'est un petit programme en ligne (c'est à dire sur un addresse)
-qui nous permet d'afficher et d'éxécuter du php pour le web.
+Il est possible d'utiliser php pour lancer son propre serveur web. C'est un petit programme en ligne (c'est à dire sur un addresse) qui nous permet d'afficher et d'éxécuter du php pour le web.
 
 ```
 php -S localhost:5353 -t .
@@ -125,15 +106,45 @@ php -S localhost:5353 -t .
 
 ## Et composer ?
 
-Composer c'est un petit outil qui permet de créer des projets
-php maintenable, en utilisant l'orientée objet et permettant
-de télécharger des librairie que d'autre utilisateurs php on créé.
+Composer c'est un petit outil qui permet de créer des projets php maintenable, en utilisant l'orientée objet et permettant de télécharger des librairie que d'autre utilisateurs php on créé.
 
 ### Initialiser composer
 
-Afin d'utiliser composer et d'autre librairie PHP, il faut tout d'abord
-l'initialiser. Pour cela :
+Afin d'utiliser composer et d'autre librairie PHP, il faut tout d'abord l'initialiser. Pour cela :
 
 ```
 composer init
 ```
+
+### Metre en place l’autoload
+
+Afin de commencer à utiliser nos classes il faut pour cela installer l’autoload :
+
+```
+composer install
+```
+
+### Utiliser l’autoload
+
+Maintenant nous pouvons facilement importer l’autoload de composer depuis n’importe quelle dossier. Les classes seront dès lors automatiquement incluses :
+
+```php
+require __DIR__ . '/../chemin/vers/vendor/autoload.php';
+```
+
+## Écrire des classes PHP
+
+Afin d’écrire notre code en Orienté objet, il faut pour cela respécter certaines conventions :
+
+- Le répertoire `src` doit correspondre au namespace `App`
+- Chaque class possède son propre fichier PHP
+- Chaque fichier doit être nommé comme le nom de la class, à l’identique
+
+## Structure d’un projet PHP
+
+Les projets PHP sont structuré en suivant la même logique qu’un système linux. Voici les répertoires les plus courant :
+
+- Le répertoire `bin` : Contient les script « éxécutable » en ligne de commande
+- Le répertoire `public` : Contient notre sitre internet (les différentes pages ou le frontend controller …)
+- Le répertoire `src` : Contient l’intégralité de nos classes
+- Le répertoire `vendor` : Contient l’autoload et les librairies php installé

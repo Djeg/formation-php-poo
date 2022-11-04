@@ -1,9 +1,8 @@
 # Exercice 3 : Le Jeux
 
-Le but de cette exercice est de réaliser l'implémentation
-du diagram de classe :
+Le but de cette exercice est de réaliser l'implémentation du diagram de classe :
 
-![classes](../assets/Classes.svg)
+![classes](../Classes.svg)
 
 ## 1. Créer la class « Weapon »
 
