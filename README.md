@@ -14,10 +14,11 @@ Vous retrouverez aussi le support de cours concernant le terminal [ici](./assets
 
 - [Exercice 1 : Le Personnage](./assets/exercices/exo-1-personnage.md)
 - [Exercice 2 : Le Personnage](./assets/exercices/exo-2-personnage.md)
-- [Exercice 3 : Le Jeux](./assets/exercices/exo-3-jeux.md)
-- [Exercice 4 : Le Jeux](./assets/exercices/exo-4-character.md)
+- [Exercice 3 : Armor et Weapon](./assets/exercices/exo-3-jeux.md)
+- [Exercice 4 : Le Character](./assets/exercices/exo-4-character.md)
 
 ## Les corrections :
 
 - [Exercice 1 : Le personnage](https://github.com/Djeg/formation-php-poo/commit/c0e280543947374e25e3c9e11dcc4c79bc9838b5)
 - [Exercice 2 : Le Personnage](https://github.com/Djeg/formation-php-poo/commit/b4f812b26dc8a52ef5c5406444de26d73e367caa)
+- [Exerice 3 : Armor et Weapon](./assets/corrections/exo-3-correction.md)

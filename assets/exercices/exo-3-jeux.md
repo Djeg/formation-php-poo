@@ -1,6 +1,6 @@
 # Exercice 3 : Le Jeux
 
-Le but de cette exercice est de réaliser l'implémentation du diagram de classe :
+Le but de cette exercice est de réaliser l'implémentation du diagramme de classe :
 
 ![classes](../Classes.svg)
 
