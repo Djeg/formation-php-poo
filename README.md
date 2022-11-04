@@ -12,6 +12,7 @@ Vous pouvez aussi le télécharger [ici](./assets/php-poo-training.pdf)
 
 - [Exercice 1 : Le Personnage](./exercices/Exercice%201%20%3A%20Le%20Personnage.md)
 - [Exercice 2 : Le Personnage](./exercices/Exercice%202%20%3A%20Le%20Personnage%20et%20classes.md)
+- [Exercice 3 : Le Jeux](./exercices/Exercice%203%20%3A%20Le%20jeux.md)
 
 ## Les corrections :
 
