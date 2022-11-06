@@ -1,6 +1,7 @@
 <?php
 
 use App\Core\Config;
+use App\Core\Database;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -8,6 +9,9 @@ if (preg_match('/\.(?:png|jpg|jpeg|gif|txt|json|js|html|pdf|avi|mp3|mp4)$/i', $_
     return false;
 }
 
-$config = new Config();
+$database = new Database(new Config());
 
-echo $config->get('DATABASE_HOST');
+$users = $database->fetchAll('SELECT * FROM user');
+
+
+var_dump($users);
