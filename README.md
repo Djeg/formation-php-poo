@@ -1,8 +1,8 @@
-# PHP POO Tutoriel
+# Développer un site internet dynamique en PHP
 
-Bienvenue dans la formation php POO (programmation orientée objet)
+Dans ce projet vous retrouverez le code complet d'un site dynamique en
+php utilisant l'orientée objet et les concepts avancées.
 
-## Les sessions
+Ce site internet est un simple blog interactif :)
 
-- [Session du 02-11-22 au 04-11-22 (DWWM-CONV-2022-07-740)](https://github.com/Djeg/formation-php-poo/tree/session/02-11-22/04-11-22)
-- [Session Projet du 07-11-22 au 10-11-22 (Développer un site Web dynamique en PHP - Projet)](https://github.com/Djeg/formation-php-poo/tree/session-projet/07-11-22/10-11-22)
+## Structure du projet
