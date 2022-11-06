@@ -1,6 +1,6 @@
 <?php
 
-use App\Core\ViewEngine;
+use App\Core\Config;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -8,9 +8,6 @@ if (preg_match('/\.(?:png|jpg|jpeg|gif|txt|json|js|html|pdf|avi|mp3|mp4)$/i', $_
     return false;
 }
 
-$view = new ViewEngine(
-    __DIR__ . '/../templates',
-    ['HTTP_METHOD' => $_SERVER['REQUEST_METHOD']],
-);
+$config = new Config();
 
-echo $view->render('hello', ['name' => 'John Doe']);
+echo $config->get('DATABASE_HOST');

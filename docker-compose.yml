@@ -32,4 +32,5 @@ services:
       - ./:/usr/src/myapp
     environment:
       PORT: 8080
+      COMPOSER_AUTH: '{"github-oauth": {"github.com": "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"}}'
     command: "php -S 0.0.0.0:8080 -t public public/index.php"
