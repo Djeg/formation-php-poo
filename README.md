@@ -1,8 +1,11 @@
-# PHP POO Tutoriel
+# Créer un site internet dynamique avec PHP orientée objet
 
-Bienvenue dans la formation php POO (programmation orientée objet)
+Dans ce projet vous apprendrez toutes les techniques afin de mettre
+en place un projet site internet dynamique robuste et en équipe !
 
-## Les sessions
+Pour cela nous allons créer un simple blog. L'idée est de proposé
+une page d'accueil affichant les derniers articles, une page pour les
+articles et des pages réservé aux administrateurs pour lister, supprimer et
+éditer des articles :).
 
-- [Session du 02-11-22 au 04-11-22 (DWWM-CONV-2022-07-740)](https://github.com/Djeg/formation-php-poo/tree/session/02-11-22/04-11-22)
-- [Session Projet du 07-11-22 au 10-11-22 (Développer un site Web dynamique en PHP - Projet)](https://github.com/Djeg/formation-php-poo/tree/session-projet/07-11-22/10-11-22)
+## Les chapitres
