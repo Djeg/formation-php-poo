@@ -1,9 +1,7 @@
 <?php
 
-use App\Controller\ListUserController;
 use App\Core\Container;
 use App\Core\Router;
-use App\Query\UserQuery;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
