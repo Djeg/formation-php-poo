@@ -125,7 +125,7 @@ Vous pouver tester on vous rendant sur la page `/style.css`.
 - Un dossier `src` : Contient toutes nos classes
 - Un dossier `vendor` : Contient l'autoload et les librairies composer
 
-Pour commence à utiliser les classes de notre projet nous devons inclure
+Pour commencer à utiliser les classes de notre projet nous devons inclure
 l'autoload de composer :
 
 Dans le fichier `public/index.php`

@@ -11,3 +11,4 @@ articles et des pages réservé aux administrateurs pour lister, supprimer et
 ## Les chapitres
 
 1. [La mise en place](./assets/cours/mise-en-place.md)
+2. [(MVC) La vue](./assets/cours/vue.md)
