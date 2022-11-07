@@ -6,7 +6,7 @@ namespace App\Core;
 
 use Dotenv\Dotenv;
 
-class Config
+class Configuration
 {
     protected string $directory;
 

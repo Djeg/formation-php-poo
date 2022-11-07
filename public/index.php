@@ -1,8 +1,6 @@
 <?php
 
-use App\Core\Config;
-use App\Core\Database;
-use App\Model\User;
+use App\Core\Container;
 use App\Query\UserQuery;
 
 require_once __DIR__ . '/../vendor/autoload.php';
@@ -11,8 +9,6 @@ if (preg_match('/\.(?:png|jpg|jpeg|gif|txt|json|js|html|pdf|avi|mp3|mp4)$/i', $_
     return false;
 }
 
-$query = new UserQuery(new Database(new Config()));
+$container = Container::start();
 
-$users = $query->findAll();
-
-var_dump($users);
+var_dump($container->get(UserQuery::class)->findAll());

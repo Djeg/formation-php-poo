@@ -14,9 +14,9 @@ class Database
 {
     protected PDO $pdo;
 
-    protected Config $config;
+    protected Configuration $config;
 
-    public function __construct(Config $config)
+    public function __construct(Configuration $config)
     {
         $this->config = $config;
         $this->pdo = new PDO(
