@@ -29,3 +29,24 @@ vendor
    de cette étape, une fenêtre de navigateur github vas s'ouvrir afin d'obtenir les permissions.
 
 À la fin de la démarche votre projet devrait disponible et en ligne sur github.
+
+## Configuration de composer
+
+Petit rappel : Composer est un outil qui permet de mettre en place l'arborescence
+d'un projet et d'installer des possible librairie.
+
+Attention, il doit être configuré, pour cela il faut ouvrir le fichier `composer.json`
+et éditer la ligne : autoload - psr-4 :
+
+```json
+{
+  // ...
+  "App\\": "src/"
+  // ...
+}
+```
+
+Il faut lancer la commande : `composer install` afin de mettre en place
+composer
+
+Vous pouvez faire un commit et publier sur github

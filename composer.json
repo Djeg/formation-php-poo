@@ -2,7 +2,7 @@
     "name": "djeg/formation-php-poo",
     "autoload": {
         "psr-4": {
-            "Djeg\\FormationPhpPoo\\": "src/"
+            "App\\": "src/"
         }
     },
     "authors": [
