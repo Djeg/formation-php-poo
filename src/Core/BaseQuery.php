@@ -17,6 +17,23 @@ abstract class BaseQuery
     }
 
     /**
+     * Retourne plusieurs résultat d'un requête sous forme
+     * de model
+     */
+    public function fetchAll(string $request, array $parameters = []): array
+    {
+        return $this->database->fetchAll($request, $parameters, $this->getModel());
+    }
+
+    /**
+     * Retourne un seul résultat sous forme de model
+     */
+    public function fetch(string $request, array $parameters = []): mixed
+    {
+        return $this->database->fetch($request, $parameters, $this->getModel());
+    }
+
+    /**
      * Retourne la class de notre model
      */
     abstract public function getModel(): string;

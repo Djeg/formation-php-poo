@@ -22,10 +22,9 @@ class UserQuery extends BaseQuery
      */
     public function findAll(): array
     {
-        return $this->database->fetchAll(
+        return $this->fetchAll(
             "SELECT * FROM user",
             [],
-            $this->getModel(),
         );
     }
 }
