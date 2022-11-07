@@ -24,3 +24,8 @@ vendor
 
 3. Réaliser un commit : Toujours sur l'onglet contrôle de source, spécifier
    un message de commit puis cliquer sur la validation
+
+4. Publier les branches sur github (en cliquant sur Publier les branches). Tout au long
+   de cette étape, une fenêtre de navigateur github vas s'ouvrir afin d'obtenir les permissions.
+
+À la fin de la démarche votre projet devrait disponible et en ligne sur github.
