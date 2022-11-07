@@ -70,7 +70,7 @@ var_dump($_SERVER);
 3. Lancer un serveur de dévelopemment sur notre « frontend controller » avec la commande :
 
 ```
-php -S localhost:11001 public/index.php
+php -S localhost:11001 -t public public/index.php
 ```
 
 Maintenant vous pouvez accéder à votre site internet sur l'addresse : http://localhost:11001
