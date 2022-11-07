@@ -24,6 +24,6 @@ class ListUserController extends BaseController
 
     public function route(): string
     {
-        return '/^users$/';
+        return '/^\/users$/';
     }
 }

@@ -28,7 +28,10 @@ class Container
             ->add(ViewEngine::class, new ViewEngine())
             ->add(Database::class, new Database($container->get(Configuration::class)))
             ->add(UserQuery::class, new UserQuery($container->get(Database::class)))
-            ->add(ListUserController::class, new ListUserController($container));
+            ->add(ListUserController::class, new ListUserController($container))
+            ->add(Router::class, new Router([
+                $container->get(ListUserController::class),
+            ]));
     }
 
     public function __construct(array $services = [])
