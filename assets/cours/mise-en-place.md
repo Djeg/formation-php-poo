@@ -77,3 +77,42 @@ Maintenant vous pouvez accéder à votre site internet sur l'addresse : http://l
 
 > IMPORTANT
 > La commande `php -S` lance un serveur de développement. Vous ne pouvez plus rentrer de commande à l'intérieur du terminal qui vient de lancer le serveur. Pour arréter un serveur il faut appuyer sur la combinaison de touche CTRL-C
+
+## Servir nos fichiers « statique »
+
+Afin de servir nos fichier statique (les fichiers présents dans le dossier `public`), il faut
+demander à notre « frontend controller » d'analyser l'URI :
+
+si L'URI contient une extension de fichier alors le script php s'arrète et laisse la place
+au fichier.
+
+Placer dans le fichier `public/index.php` le code suivant
+
+```php
+<?php
+
+// On test si l'on demande un fichier se terminant par les extensions suivante
+if (preg_match("/(.css|.png|.jpeg|.js|.gif|.pdf|.mp3|.mp4|.html|.jpg)$/i", $_SERVER['REQUEST_URI'])) {
+    // On demande à PHP de ne pas se lancer. Ainsi ce sera le fichier
+    // demandé qui sera retourné dans notre navigateur
+    return false;
+}
+
+var_dump($_SERVER);
+```
+
+Créer le fichier `public/style.css` avec le code suivant :
+
+```css
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+```
+
+Vous pouver tester on vous rendant sur la page `/style.css`.
+
+> BONUS
+> Pour ceux qui le désire il éxsiste de très très bon tutoriel sur les expression rédulière :
+> [Celui ci par exemple](https://www.zendevs.xyz/les-expressions-regulieres-en-php-regex/)
