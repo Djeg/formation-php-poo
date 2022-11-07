@@ -3,6 +3,7 @@
 use App\Core\Config;
 use App\Core\Database;
 use App\Model\User;
+use App\Query\UserQuery;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -10,9 +11,8 @@ if (preg_match('/\.(?:png|jpg|jpeg|gif|txt|json|js|html|pdf|avi|mp3|mp4)$/i', $_
     return false;
 }
 
-$database = new Database(new Config());
+$query = new UserQuery(new Database(new Config()));
 
-$users = $database->fetchAll('SELECT * FROM user', [], User::class);
-
+$users = $query->findAll();
 
 var_dump($users);
