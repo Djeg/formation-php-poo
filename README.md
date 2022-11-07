@@ -9,3 +9,5 @@ articles et des pages réservé aux administrateurs pour lister, supprimer et
 éditer des articles :).
 
 ## Les chapitres
+
+1. [La mise en place](./assets/cours/mise-en-place.md)

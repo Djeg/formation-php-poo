@@ -1,0 +1,15 @@
+{
+    "name": "djeg/formation-php-poo",
+    "autoload": {
+        "psr-4": {
+            "Djeg\\FormationPhpPoo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "David Jegat",
+            "email": "david.jegat@gmail.com"
+        }
+    ],
+    "require": {}
+}
