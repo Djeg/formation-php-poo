@@ -33,7 +33,7 @@ vendor
 ## Configuration de composer
 
 Petit rappel : Composer est un outil qui permet de mettre en place l'arborescence
-d'un projet et d'installer des possible librairie.
+d'un projet et d'installer des possible librairies.
 
 Attention, il doit être configuré, pour cela il faut ouvrir le fichier `composer.json`
 et éditer la ligne : autoload - psr-4 :
@@ -50,3 +50,30 @@ Il faut lancer la commande : `composer install` afin de mettre en place
 composer
 
 Vous pouvez faire un commit et publier sur github
+
+## Lancer un serveur de développement
+
+Un site professionnel en php contient une seule page php : **Le frontend controller**.
+
+Ce script php est le point de départ de notre site internet, il contiendra **TOUT LE CODE
+NESCESSAIRE** au bon fonctionnement de notre site.
+
+1. Créer un fichier dans le dossier `public` nommé : `index.php`
+2. Placer le code suivant :
+
+```php
+<?php
+
+var_dump($_SERVER);
+```
+
+3. Lancer un serveur de dévelopemment sur notre « frontend controller » avec la commande :
+
+```
+php -S localhost:11001 public/index.php
+```
+
+Maintenant vous pouvez accéder à votre site internet sur l'addresse : http://localhost:11001
+
+> IMPORTANT
+> La commande `php -S` lance un serveur de développement. Vous ne pouvez plus rentrer de commande à l'intérieur du terminal qui vient de lancer le serveur. Pour arréter un serveur il faut appuyer sur la combinaison de touche CTRL-C
