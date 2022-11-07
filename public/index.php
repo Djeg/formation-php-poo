@@ -1,5 +1,6 @@
 <?php
 
+use App\Controller\ListUserController;
 use App\Core\Container;
 use App\Query\UserQuery;
 
@@ -11,4 +12,4 @@ if (preg_match('/\.(?:png|jpg|jpeg|gif|txt|json|js|html|pdf|avi|mp3|mp4)$/i', $_
 
 $container = Container::start();
 
-var_dump($container->get(UserQuery::class)->findAll());
+echo $container->get(ListUserController::class)->start();

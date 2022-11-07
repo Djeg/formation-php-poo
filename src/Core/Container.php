@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Core;
 
+use App\Controller\ListUserController;
 use App\Query\UserQuery;
 use Exception;
 
@@ -26,7 +27,8 @@ class Container
             ->add(Configuration::class, new Configuration())
             ->add(ViewEngine::class, new ViewEngine())
             ->add(Database::class, new Database($container->get(Configuration::class)))
-            ->add(UserQuery::class, new UserQuery($container->get(Database::class)));
+            ->add(UserQuery::class, new UserQuery($container->get(Database::class)))
+            ->add(ListUserController::class, new ListUserController($container));
     }
 
     public function __construct(array $services = [])
