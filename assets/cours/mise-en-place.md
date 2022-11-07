@@ -116,3 +116,25 @@ Vous pouver tester on vous rendant sur la page `/style.css`.
 > BONUS
 > Pour ceux qui le désire il éxsiste de très très bon tutoriel sur les expression rédulière :
 > [Celui ci par exemple](https://www.zendevs.xyz/les-expressions-regulieres-en-php-regex/)
+
+## Arborescence du projet
+
+- Un fichier `composer.json` et `composer.lock` : Se sont les fichier de configuration de composer
+- Un dossier `public` : Contient notre site internet (le frontend controller, ainsi que tout les fichiers
+  nescessaire au bon fonctionment de notre site).
+- Un dossier `src` : Contient toutes nos classes
+- Un dossier `vendor` : Contient l'autoload et les librairies composer
+
+Pour commence à utiliser les classes de notre projet nous devons inclure
+l'autoload de composer :
+
+Dans le fichier `public/index.php`
+
+```php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+// ...
+
+```
