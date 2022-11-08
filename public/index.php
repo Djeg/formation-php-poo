@@ -2,6 +2,7 @@
 
 // On inclue l'autoload composer nous permettant d'utiliser nos classes
 
+use App\Core\Configuration;
 use App\Core\View;
 
 require __DIR__ . '/../vendor/autoload.php';
@@ -15,6 +16,12 @@ if (preg_match("/(.css|.png|.jpeg|.js|.gif|.pdf|.mp3|.mp4|.html|.jpg)$/i", $_SER
 
 // Créer une View
 $view = new View(__DIR__ . '/../templates');
+
+// Créer la configuration
+$config = new Configuration(__DIR__ . '/..');
+
+// Affiche le contenue de DATABASE_USER
+echo $config->get('DATABASE_USER');
 
 // Affiche le « template » (la page) hello.php
 echo $view->render('hello', ['name' => 'John Doe']);
