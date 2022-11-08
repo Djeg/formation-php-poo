@@ -23,7 +23,7 @@ DATABASE_PASSWORD=root
 
 ## 2. Récupérer des variables d'environement en PHP
 
-PHP est un langage assez « ancien », il ne supporte pas les variables d'environement. Mais
+PHP est un langage assez « ancien », il ne supporte pass les variables d'environement. Mais
 par contre, grâce à composer, il est possible d'installer une librairie nous permettant de
 lire nos variables d'environement. Pour cela il suffit de lancer la commande suivante :
 
