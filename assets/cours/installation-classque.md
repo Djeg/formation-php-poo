@@ -39,7 +39,7 @@ Vous pouvez télécharger le base de données [ici](https://raw.githubuserconten
 
 Vous avez plus qu'a insérer la base de données dans phpmyadmin :
 
-![phpmyadmin](./assets/phpmyadmin.png)
+![phpmyadmin](./../phpmyadmin.png)
 
 ## 4. Configurer l'application
 

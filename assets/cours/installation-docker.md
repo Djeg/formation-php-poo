@@ -14,6 +14,7 @@ les commandes suivantes
 ```bash
 git clone -b session-projet/07-11-22/10-11-22 https://github.com/Djeg/formation-php-poo.git <nomDuDossier>
 cd <nomDuDossier>
+code .
 ```
 
 ## 2. Démaré l'application
