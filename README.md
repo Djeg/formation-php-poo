@@ -40,7 +40,11 @@ Vous avez plus qu'a insérer la base de données dans phpmyadmin :
 
 ![phpmyadmin](./assets/phpmyadmin.png)
 
-### 4. Lancer le serveur php
+### 4. Configurer l'application
+
+Ouvrir le fichier `.env` et remplir avec vos valeurs de configuration
+
+### 5. Lancer le serveur php
 
 Toujours dans un terminal dans le projet, lancer la commande :
 
