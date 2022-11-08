@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : mysql
--- Généré le : mar. 08 nov. 2022 à 10:07
+-- Généré le : mar. 08 nov. 2022 à 10:50
 -- Version du serveur : 8.0.28
 -- Version de PHP : 7.4.27
 
@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `blog_tutorial`
 --
-CREATE DATABASE IF NOT EXISTS `blog_tutorial` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+CREATE DATABASE IF NOT EXISTS `blog_tutorial` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `blog_tutorial`;
 
 -- --------------------------------------------------------
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `articles` (
   `author` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `author` (`author`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `articles`
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `createdAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updatedAt` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `users`
