@@ -12,10 +12,8 @@ Dans un terminal (remplacer `<nomDuDossier>` par le nom de votre choix) lancer
 les commandes suivantes
 
 ```bash
-git clone https://github.com/Djeg/formation-php-poo.git <nomDuDossier>
+git clone -b session-projet/07-11-22/10-11-22 https://github.com/Djeg/formation-php-poo.git <nomDuDossier>
 cd <nomDuDossier>
-git fetch --all
-git checkout session-projet/07-11-22/10-11-22
 docker-compose up -d
 docker-compose exec app bin/install
 code .
