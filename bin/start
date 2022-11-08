@@ -1,22 +1,23 @@
 #!/usr/bin/env bash
 # Export env vars
 export $(grep -v '^#' .env | xargs)
-echo "============================================="
-echo "====== Installation de l'application :) ====="
-echo "============================================="
-echo ""
-echo "Etape 1 : Téléchargement des machines virtuel"
-echo "    Cette étape peur prendre du temps,"
-echo "    patientons un peu ..."
-echo ""
-docker-compose up -d > /dev/null
+echo -e "============================================="
+echo -e "====== Installation de l'application :) ====="
+echo -e "============================================="
+echo -e ""
+echo -e "Etape 1 : Téléchargement des machines virtuel"
+echo -e "    Cette étape peur prendre du temps,"
+echo -e "    patientons un peu ..."
+echo -e ""
+docker-compose up -d &> /dev/null
 echo "C'est fini !"
 echo ""
 echo "============================================="
 echo ""
 echo "Etape 2 : Installation de la base de données"
-echo ""
-docker-compose exec php bin/install > /dev/null
+echo "    Cette étape peur prendre du temps,"
+echo "    patientons un peu ..."
+docker-compose exec app bin/install &> /dev/null
 echo "C'est fini !"
 echo "============================================="
 echo ""

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Export env vars
+echo "L'application est en cours d'arrêt ..."
+echo ""
+docker-compose down &> /dev/null
+echo "============================================="
+echo "=========== C'est Fais, au revoir ! ========="
+echo "============================================="
