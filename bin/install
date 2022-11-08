@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+echo "Installing composer depdendencies ..."
+composer install
+echo "DONE"
+echo ""
+echo ""
+echo "Installing database ..."
+mysql -u"$DATABASE_USER" -p"$DATABASE_PASSWORD" -h"$DATABASE_HOST" < assets/blog_tutorial.sql
+echo "DONE"
+echo ""
+echo ""
+echo ""
+echo "========== INSTALLATION COMPLETE =========="
+echo ""
+echo " visit the application: http://localhost:$SERVER_PORT"
+echo " visit phpmyadmin : http://localhost:$PHPMYADMIN_PORT"
+echo ""
+echo " for phpmyadmin :"
+echo " 		Serveur : mysql"
+echo " 		Utilisateur : root"
+echo " 		Mot de passe : root"
+echo ""
+echo "================= ENJOY :) ================="
