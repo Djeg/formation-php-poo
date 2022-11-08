@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+# Export env vars
+export $(grep -v '^#' .env | xargs)
+echo "============================================="
+echo "====== Installation de l'application :) ====="
+echo "============================================="
+echo ""
+echo "Etape 1 : Téléchargement des machines virtuel"
+echo "    Cette étape peur prendre du temps,"
+echo "    patientons un peu ..."
+echo ""
+docker-compose up -d > /dev/null
+echo "C'est fini !"
+echo ""
+echo "============================================="
+echo ""
+echo "Etape 2 : Installation de la base de données"
+echo ""
+docker-compose exec php bin/install > /dev/null
+echo "C'est fini !"
+echo "============================================="
+echo ""
+echo " L'installation est terminé !"
+echo ""
+echo " L'application est disponible ici :"
+echo "    http://localhost:$SERVER_PORT"
+echo " Vous avez aussi accés à phpmyadmin :"
+echo "    http://localhost:$PHPMYADMIN_PORT"
+echo ""
+echo " Pour phpmyadmin :"
+echo " 		Serveur : mysql"
+echo " 		Utilisateur : root"
+echo " 		Mot de passe : root"
+echo ""
+echo "============================================="
+echo "============== Happy Training ! ============="
+echo "============================================="
+

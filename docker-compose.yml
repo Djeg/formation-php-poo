@@ -2,7 +2,7 @@ version: "3"
 
 services:
   mysql:
-    image: "mysql"
+    image: mysql
     restart: always
     command: --default-authentication-plugin=mysql_native_password
     volumes:
@@ -26,6 +26,7 @@ services:
     depends_on:
       - mysql
     restart: always
+    user: "1000"
     ports:
       - ${SERVER_PORT}:${SERVER_PORT}
     volumes:
