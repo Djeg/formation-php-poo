@@ -13,3 +13,4 @@ articles et des pages réservé aux administrateurs pour lister, supprimer et
 1. [La mise en place](./assets/cours/mise-en-place.md)
 2. [(MVC) La vue](./assets/cours/vue.md)
 3. [(MVC) La configuration](./assets/cours/configuration.md)
+4. [(MVC) Le Model](./assets/cours/model.md)

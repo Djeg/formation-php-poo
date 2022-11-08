@@ -4,7 +4,7 @@ root = true
 end_of_line = lf
 insert_final_newline = true
 
-[*.{yml,js,yaml,css}]
+[*.{yml,js,yaml,css,md}]
 indent_size = 2
 indent_style = space
 

@@ -20,6 +20,9 @@ $view = new View(__DIR__ . '/../templates');
 // Créer la configuration
 $config = new Configuration(__DIR__ . '/..');
 
+echo "<p>Est-ce que DATABASE_USER existe ?</p>";
+echo "<p>{$config->has('DATABASE_USER')}</p>";
+
 // Affiche le contenue de DATABASE_USER
 echo $config->get('DATABASE_USER');
 
