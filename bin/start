@@ -17,7 +17,7 @@ echo ""
 echo "Etape 2 : Installation de la base de données"
 echo "    Cette étape peur prendre du temps,"
 echo "    patientons un peu ..."
-docker-compose exec app bin/install &> /dev/null
+docker-compose exec app sh bin/install &> /dev/null
 echo "C'est fini !"
 echo "============================================="
 echo ""

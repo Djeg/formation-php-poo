@@ -5,7 +5,7 @@ echo "DONE"
 echo ""
 echo ""
 echo "Installing database ..."
-bin/wait-for -t 60 $DATABASE_HOST:$DATABASE_PORT
+bash bin/wait-for -t 60 $DATABASE_HOST:$DATABASE_PORT
 mysql -u"$DATABASE_USER" -p"$DATABASE_PASSWORD" -h"$DATABASE_HOST" < assets/blog_tutorial.sql
 echo "DONE"
 echo ""
