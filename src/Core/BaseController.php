@@ -23,4 +23,12 @@ abstract class BaseController
      * la page du controller.
      */
     abstract public function run(): string;
+
+    /**
+     * Contrat de la méthode supports. Cette méthode prend
+     * une uri en paramètre et retourne vrai ou faux. Vrai
+     * si l'uri correspond au controller, faux si l'uri ne correspond
+     * pas
+     */
+    abstract public function supports(string $uri): bool;
 }

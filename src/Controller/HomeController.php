@@ -27,4 +27,12 @@ class HomeController extends BaseController
             'articles' => $articles,
         ]);
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function supports(string $uri): bool
+    {
+        return $uri === '/';
+    }
 }

@@ -51,7 +51,10 @@ class Container
             // Création de la table des articles
             ->add(ArticleTable::class, new ArticleTable($container->get(PDO::class)))
             // Création du controller de la page d'accueil
-            ->add(HomeController::class, new HomeController($container));
+            ->add(HomeController::class, new HomeController($container))
+            ->add(Router::class, new Router([
+                $container->get(HomeController::class),
+            ]));
     }
 
     public function __construct()
