@@ -23,3 +23,4 @@ difficile n'utilisant pas docker et l'autre plus simple :
 3. [(MVC) La configuration](./assets/cours/configuration.md)
 4. [(MVC) Le Model](./assets/cours/model.md)
 5. [(MVC) Le Container](./assets/cours/container.md)
+6. [(MVC) Le Controller](./assets/cours/controller.md)
