@@ -19,7 +19,7 @@ class HomeController extends BaseController
     public function run(): string
     {
         // Je récupére mes articles
-        $articles = $this->container->get(ArticleTable::class)->findAll();
+        $articles = $this->container->get(ArticleTable::class)->findLastTen();
 
         // Je retourne le template (page) "home" en lui donnant tout les
         // articles
