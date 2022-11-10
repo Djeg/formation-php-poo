@@ -1,0 +1,26 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Core;
+
+/**
+ * Cette class est la classe de base de tout nos controller. Elle possède
+ * tout simplement le container
+ */
+abstract class BaseController
+{
+    protected Container $container;
+
+    public function __construct(Container $container)
+    {
+        $this->container = $container;
+    }
+
+    /**
+     * Contrat de la méthode run. Cette méthode doit être
+     * « implémenter » pour chaque controller et dois afficher
+     * la page du controller.
+     */
+    abstract public function run(): string;
+}

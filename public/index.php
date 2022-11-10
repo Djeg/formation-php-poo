@@ -2,6 +2,7 @@
 
 // On inclue l'autoload composer nous permettant d'utiliser nos classes
 
+use App\Controller\HomeController;
 use App\Core\View;
 use App\Core\Container;
 use App\Table\UserTable;
@@ -20,22 +21,5 @@ if (preg_match("/(.css|.png|.jpeg|.js|.gif|.pdf|.mp3|.mp4|.html|.jpg)$/i", $_SER
 // Création du container
 $container = Container::boot();
 
-echo "<h2>Les utilisateurs</h2>";
-
-// récupére tout les utilisateurs
-$users = $container->get(UserTable::class)->findAll();
-
-foreach ($users as $user) {
-    echo "<p>{$user->email}</p>";
-}
-
-// J'aimerais afficher tout les articles !!
-
-// 2. On récupére tout les articles
-$articles = $container->get(ArticleTable::class)->findAll();
-
-echo "<h2>Les Articles</h2>";
-
-foreach ($articles as $article) {
-    echo "<p>{$article->title}</p>";
-}
+// Afficher le résultat de la méthode run de mon « HomeController »
+echo $container->get(HomeController::class)->run();

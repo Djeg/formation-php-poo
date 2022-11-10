@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Core;
 
+use App\Controller\HomeController;
 use PDO;
 use Exception;
 use App\Table\UserTable;
@@ -48,7 +49,9 @@ class Container
             // Création de la table des utilisateurs
             ->add(UserTable::class, new UserTable($container->get(PDO::class)))
             // Création de la table des articles
-            ->add(ArticleTable::class, new ArticleTable($container->get(PDO::class)));
+            ->add(ArticleTable::class, new ArticleTable($container->get(PDO::class)))
+            // Création du controller de la page d'accueil
+            ->add(HomeController::class, new HomeController($container));
     }
 
     public function __construct()
