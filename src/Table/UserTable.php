@@ -31,4 +31,26 @@ class UserTable extends BaseTable
 
         return $users;
     }
+
+    /**
+     * Insert un nouvel utilisateur dans la base de données
+     */
+    public function insert(User $user): void
+    {
+        // Préparation de la requête SQL
+        $request = $this->pdo->prepare("
+            INSERT INTO users (email, password, firstname, lastname, createdAt, updatedAt)
+            VALUES (:email, :password, :firstname, :lastname, :createdAt, :updatedAt)
+        ");
+
+        // On lance la requête avec les bon paramètres
+        $request->execute([
+            'email' => $user->email,
+            'password' => $user->password,
+            'firstname' => $user->firstname,
+            'lastname' => $user->lastname,
+            'createdAt' => $user->createdAt,
+            'updatedAt' => $user->updatedAt,
+        ]);
+    }
 }

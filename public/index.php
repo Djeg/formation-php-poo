@@ -14,8 +14,7 @@ if (preg_match("/(.css|.png|.jpeg|.js|.gif|.pdf|.mp3|.mp4|.html|.jpg)$/i", $_SER
     return false;
 }
 
-// Création du container
-$container = Container::boot();
-
-// On démarre le router de notre application
-echo $container->get(Router::class)->start($_SERVER['REQUEST_URI']);
+// Démarage de l'application
+echo Container::boot()
+    ->get(Router::class)
+    ->start($_SERVER['REQUEST_URI']);

@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Core;
 
 use App\Controller\HomeController;
+use App\Controller\LoginController;
+use App\Controller\SubscriptionController;
 use PDO;
 use Exception;
 use App\Table\UserTable;
@@ -52,8 +54,15 @@ class Container
             ->add(ArticleTable::class, new ArticleTable($container->get(PDO::class)))
             // Création du controller de la page d'accueil
             ->add(HomeController::class, new HomeController($container))
+            // Création du controller de la page coneexion
+            ->add(LoginController::class, new LoginController($container))
+            // Création du controller de la page d'inscription
+            ->add(SubscriptionController::class, new SubscriptionController($container))
+            // Création du router
             ->add(Router::class, new Router([
                 $container->get(HomeController::class),
+                $container->get(LoginController::class),
+                $container->get(SubscriptionController::class),
             ]));
     }
 
