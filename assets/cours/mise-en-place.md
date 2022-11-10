@@ -1,7 +1,6 @@
 # La mise en place
 
-Afin de demarrer un projet PHP. Il faut tout d'abord créer notre dossier
-et mettre en place composer.
+Afin de demarrer un projet PHP. Il faut tout d'abord créer notre dossier et mettre en place composer.
 
 ```bash
 mkdir NomDuProjet
@@ -32,11 +31,9 @@ vendor
 
 ## Configuration de composer
 
-Petit rappel : Composer est un outil qui permet de mettre en place l'arborescence
-d'un projet et d'installer des possible librairies.
+Petit rappel : Composer est un outil qui permet de mettre en place l'arborescence d'un projet et d'installer des possible librairies.
 
-Attention, il doit être configuré, pour cela il faut ouvrir le fichier `composer.json`
-et éditer la ligne : autoload - psr-4 :
+Attention, il doit être configuré, pour cela il faut ouvrir le fichier `composer.json` et éditer la ligne : autoload - psr-4 :
 
 ```json
 {
@@ -46,8 +43,7 @@ et éditer la ligne : autoload - psr-4 :
 }
 ```
 
-Il faut lancer la commande : `composer install` afin de mettre en place
-composer
+Il faut lancer la commande : `composer install` afin de mettre en place composer
 
 Vous pouvez faire un commit et publier sur github
 
@@ -80,11 +76,9 @@ Maintenant vous pouvez accéder à votre site internet sur l'addresse : http://l
 
 ## Servir nos fichiers « statique »
 
-Afin de servir nos fichier statique (les fichiers présents dans le dossier `public`), il faut
-demander à notre « frontend controller » d'analyser l'URI :
+Afin de servir nos fichier statique (les fichiers présents dans le dossier `public`), il faut demander à notre « frontend controller » d'analyser l'URI :
 
-si L'URI contient une extension de fichier alors le script php s'arrète et laisse la place
-au fichier.
+si L'URI contient une extension de fichier alors le script php s'arrète et laisse la place au fichier.
 
 Placer dans le fichier `public/index.php` le code suivant
 
@@ -125,8 +119,7 @@ Vous pouver tester on vous rendant sur la page `/style.css`.
 - Un dossier `src` : Contient toutes nos classes
 - Un dossier `vendor` : Contient l'autoload et les librairies composer
 
-Pour commencer à utiliser les classes de notre projet nous devons inclure
-l'autoload de composer :
+Pour commencer à utiliser les classes de notre projet nous devons inclure l'autoload de composer :
 
 Dans le fichier `public/index.php`
 
