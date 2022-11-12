@@ -19,9 +19,3 @@ difficile n'utilisant pas docker et l'autre plus simple :
 ## Les chapitres
 
 1. [La mise en place](./assets/cours/mise-en-place.md)
-2. [(MVC) La vue](./assets/cours/vue.md)
-3. [(MVC) La configuration](./assets/cours/configuration.md)
-4. [(MVC) Le Model](./assets/cours/model.md)
-5. [(MVC) Le Container](./assets/cours/container.md)
-6. [(MVC) Le Controller](./assets/cours/controller.md)
-7. [(MVC) Le Router](./assets/cours/router.md)
