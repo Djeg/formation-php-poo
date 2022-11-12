@@ -29,4 +29,20 @@ class ArticleRepository extends BaseRepository
         // d'instance de l'entité Article
         return $request->fetchAll(PDO::FETCH_CLASS, Article::class);
     }
+
+    /**
+     * Retourne les 10 derniers articles, ordonnée par date de création
+     */
+    public function findLastTen(): array
+    {
+        // Création de la requête SQL
+        $request = $this->pdo->prepare('SELECT * FROM articles ORDER BY createdAt DESC LIMIT 10');
+
+        // Éxécution de la requête
+        $request->execute();
+
+        // Récupération des résultats sous forme de tableaux
+        // d'instance de l'entité Article
+        return $request->fetchAll(PDO::FETCH_CLASS, Article::class);
+    }
 }

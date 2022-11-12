@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Core;
 
+use App\Controller\HomeController;
 use App\Repository\ArticleRepository;
 use App\Repository\UserRepository;
 use Exception;
@@ -50,7 +51,8 @@ class Container
                 $container->get(Configuration::class)->get('DATABASE_PASSWORD'),
             ))
             ->add(ArticleRepository::class, new ArticleRepository($container->get(PDO::class)))
-            ->add(UserRepository::class, new UserRepository($container->get(PDO::class)));
+            ->add(UserRepository::class, new UserRepository($container->get(PDO::class)))
+            ->add(HomeController::class, new HomeController($container), ['controller']);
     }
 
     /**
