@@ -1,7 +1,7 @@
 <?php
 
-use App\Controller\HomeController;
 use App\Core\Container;
+use App\Core\Router;
 
 // Nous incluons l'autoload de composer
 require __DIR__ . '/../vendor/autoload.php';
@@ -14,7 +14,7 @@ if (preg_match("/(.css|.png|.jpeg|.js|.gif|.pdf|.mp3|.mp4|.html|.jpg)$/i", $_SER
     return false;
 }
 
-// Création d'un container et affichage du controller Hom
+// Création d'un container démarrage du router :
 echo Container::boot()
-    ->get(HomeController::class)
-    ->run();
+    ->get(Router::class)
+    ->start($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);

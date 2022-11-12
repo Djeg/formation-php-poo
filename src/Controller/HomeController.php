@@ -34,6 +34,6 @@ class HomeController extends BaseController
     public function supports(string $method, string $uri): bool
     {
         // On s'assure que ce controller ne s'affiche que sur l'uri "/"
-        return false !== preg_match("/^\/?$/", $uri);
+        return (bool)preg_match("/^\/?$/", $uri);
     }
 }

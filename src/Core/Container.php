@@ -52,7 +52,8 @@ class Container
             ))
             ->add(ArticleRepository::class, new ArticleRepository($container->get(PDO::class)))
             ->add(UserRepository::class, new UserRepository($container->get(PDO::class)))
-            ->add(HomeController::class, new HomeController($container), ['controller']);
+            ->add(HomeController::class, new HomeController($container), ['controller'])
+            ->add(Router::class, new Router($container->getTagged('controller')));
     }
 
     /**
