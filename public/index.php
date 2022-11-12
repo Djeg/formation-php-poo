@@ -1,5 +1,8 @@
 <?php
 
+
+use App\Core\View;
+
 // Nous incluons l'autoload de composer
 require __DIR__ . '/../vendor/autoload.php';
 
@@ -11,4 +14,8 @@ if (preg_match("/(.css|.png|.jpeg|.js|.gif|.pdf|.mp3|.mp4|.html|.jpg)$/i", $_SER
     return false;
 }
 
-echo "<h1>Frontend Controller</h1>";
+// Création de la view
+$view = new View(__DIR__ . '/../templates', ['app_name' => 'blog']);
+
+// affichage de la page hello :
+echo $view->render('hello', ['name' => 'John Doe']);
