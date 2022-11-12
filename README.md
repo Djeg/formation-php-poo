@@ -22,3 +22,4 @@ difficile n'utilisant pas docker et l'autre plus simple :
 2. [La Vue](./assets/cours/vue.md)
 3. [La Configuration](./assets/cours/configuration.md)
 4. [Le Model](./assets/cours/model.md)
+5. [Le Container](./assets/cours/container.md)
