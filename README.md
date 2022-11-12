@@ -20,3 +20,4 @@ difficile n'utilisant pas docker et l'autre plus simple :
 
 1. [La mise en place](./assets/cours/mise-en-place.md)
 2. [La Vue](./assets/cours/vue.md)
+3. [La Configuration](./assets/cours/configuration.md)

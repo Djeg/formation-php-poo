@@ -1,9 +1,10 @@
 <?php
 
 
-use App\Core\View;
-
 // Nous incluons l'autoload de composer
+
+use App\Core\Configuration;
+
 require __DIR__ . '/../vendor/autoload.php';
 
 // Tout d'abord nous testons si la page demandé est une resource
@@ -14,8 +15,9 @@ if (preg_match("/(.css|.png|.jpeg|.js|.gif|.pdf|.mp3|.mp4|.html|.jpg)$/i", $_SER
     return false;
 }
 
-// Création de la view
-$view = new View(__DIR__ . '/../templates', ['app_name' => 'blog']);
+// Création d'un objet configuration
+$config = new Configuration(__DIR__ . '/..');
 
-// affichage de la page hello :
-echo $view->render('hello', ['name' => 'John Doe']);
+// On affiche le nom de la base de données contenu
+// dans notre fichier ".env"
+echo $config->get('DATABASE_NAME');
